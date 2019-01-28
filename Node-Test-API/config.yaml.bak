@@ -1,0 +1,19 @@
+﻿ldap:
+    enabled: true
+    url: 'ldap://dcfargo.marvin.com:389'
+    bindDn: >-
+        CN=ITFGIGNDEV01,OU=ScadaUsers,OU=Shared Accounts,OU=Fargo,OU=Integrity,DC=marvin,DC=com
+    bindCredentials: Letmein1
+    searchBase: 'OU=Users,OU=Fargo,OU=Integrity,DC=marvin,DC=com'
+    searchFilter: '(samaccountname={{username}})'
+    tlsEnabled: false
+    tlsCertPath: 'C:\example\root_ca_cert.crt'
+
+network:
+    port: 4002
+
+sqlConn:
+    user: 'ruben'
+    password: 'zerozero'
+    server: 'ITF-LPT334\RUBENSQL'
+    database: 'SCADAMAIN'
