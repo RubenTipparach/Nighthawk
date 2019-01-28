@@ -868,7 +868,7 @@ namespace BaroqueUI
 
             internal void SetBackgroundColor(Color backgroundColor)
             {
-                ortho_camera.backgroundColor = backgroundColor;
+                //ortho_camera.backgroundColor = backgroundColor;
             }
 
             private void OnDestroy()

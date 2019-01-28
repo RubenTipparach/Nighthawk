@@ -48,3 +48,22 @@ app.get('/', (req,res) => {
 	res.send('Node API Server is online');
 });
 
+
+
+const ipFound = [
+{
+	octets: [192, 168, 0, 1],
+	children: [
+		{ octets:[192, 168, 1, 1] },
+		{ octets:[192, 168, 1, 2] }
+		]
+},
+{ octets: [192, 168, 0, 2] }
+];
+
+app.get('/iptargets', (req,res) => {
+
+	
+	res.send('');
+});
+
