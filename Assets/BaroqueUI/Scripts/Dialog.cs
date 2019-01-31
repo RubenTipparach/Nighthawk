@@ -879,7 +879,8 @@ namespace BaroqueUI
 
             public void Render()
             {
-                render_texture.DiscardContents();
+                if(render_texture != null)
+                    render_texture.DiscardContents();
                 ortho_camera.Render();
             }
 
