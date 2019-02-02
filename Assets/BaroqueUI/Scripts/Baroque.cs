@@ -10,11 +10,7 @@ namespace BaroqueUI
     {
         static public SteamVR_ControllerManager GetSteamVRManager()
         {
-            GameObject gobj = GameObject.Find("/[CameraRig]");
-            if (gobj == null)
-                throw new MissingComponentException("'[CameraRig]' gameobject not found at the top level of the scene");
-
-            SteamVR_ControllerManager mgr = gobj.GetComponent<SteamVR_ControllerManager>();
+            SteamVR_ControllerManager mgr = SteamVRBaroqueInterface.svrBaroqueInterface.steamVR_ControllerManager;
             if (mgr == null)
                 throw new MissingComponentException("'[CameraRig]' gameobject is missing a SteamVR_ControllerManager component");
 

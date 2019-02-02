@@ -235,6 +235,7 @@ namespace BaroqueUI
         BackgroundRenderer background_renderer;
 
         const int UI_layer = 29;   /* and the next one */
+        static bool camera_onprecull_set = false;
 
         static void CreateLayer()
         {
@@ -267,8 +268,21 @@ namespace BaroqueUI
             Debug.Assert(layer30.stringValue == "BaroqueUI dialog rendering");
 #endif
 
-            /* set up the main camera to hide these two layers */
-            Baroque.GetHeadTransform().GetComponent<Camera>().cullingMask &= ~(3 << UI_layer);
+            /* we want all cameras to hide these two layers */
+            if (!camera_onprecull_set)
+            {
+                Camera.onPreCull += Camera_OnPreCull;
+                camera_onprecull_set = true;
+            }
+        }
+
+        static void Camera_OnPreCull(Camera cam)
+        {
+            /* by default, our two dialog layers are hidden in all cameras.  The exception is
+             * the special cameras set up below, for which we will compute 'mask == 0'. */
+            int mask = cam.cullingMask & ~(3 << UI_layer);
+            if (mask != 0 && mask != cam.cullingMask)
+                cam.cullingMask = mask;
         }
 
         public void DisplayDialog()
@@ -799,9 +813,12 @@ namespace BaroqueUI
                     float zscale = transform.InverseTransformVector(transform.forward * 0.108f).magnitude;
 
                     BoxCollider coll = gameObject.AddComponent<BoxCollider>();
-                    coll.isTrigger = true;
-                    coll.size = new Vector3(r.width, r.height, zscale);
-                    coll.center = new Vector3(r.center.x, r.center.y, zscale * -0.3125f);
+                    if (coll != null)
+                    {
+                        coll.isTrigger = true;
+                        coll.size = new Vector3(r.width, r.height, zscale);
+                        coll.center = new Vector3(r.center.x, r.center.y, zscale * -0.3125f);
+                    }
                 }
 
                 this.pixels_per_unit = pixels_per_unit;
@@ -868,6 +885,7 @@ namespace BaroqueUI
 
             internal void SetBackgroundColor(Color backgroundColor)
             {
+                // assume that there's no background color to mess about.
                 //ortho_camera.backgroundColor = backgroundColor;
             }
 
@@ -879,8 +897,7 @@ namespace BaroqueUI
 
             public void Render()
             {
-                if(render_texture != null)
-                    render_texture.DiscardContents();
+                render_texture.DiscardContents();
                 ortho_camera.Render();
             }
 
