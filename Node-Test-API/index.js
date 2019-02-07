@@ -49,7 +49,6 @@ app.get('/', (req,res) => {
 });
 
 
-
 const ipFound = [
 {
 	octets: [192, 168, 0, 1],
