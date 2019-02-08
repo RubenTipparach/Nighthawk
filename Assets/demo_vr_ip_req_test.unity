@@ -15958,7 +15958,7 @@ Transform:
   m_GameObject: {fileID: 1035224829}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 1705071983}
   m_RootOrder: 1
@@ -15980,6 +15980,8 @@ MonoBehaviour:
     type: 3}
   Lvl1_Host_Mat: {fileID: 2100000, guid: 89069f0fe6b97ea42b44e4ce1ddfee9c, type: 2}
   Lvl2_Host_Mat: {fileID: 2100000, guid: c02b4b6739247e84fbb50b7c6df7c14f, type: 2}
+  textPrefab: {fileID: 5544712962785086480, guid: 3c50e9fd6d21f5a429d087bb6c6e5247,
+    type: 3}
 --- !u!1 &1037284003
 GameObject:
   m_ObjectHideFlags: 0
@@ -30481,6 +30483,7 @@ GameObject:
   - component: {fileID: 1933670539}
   - component: {fileID: 1933670546}
   - component: {fileID: 1933670542}
+  - component: {fileID: 1933670543}
   m_Layer: 0
   m_Name: RightController
   m_TagString: Untagged
@@ -30575,6 +30578,19 @@ MonoBehaviour:
   maximumCursorScale: {x: Infinity, y: Infinity, z: Infinity}
   customTracer: {fileID: 0}
   customCursor: {fileID: 0}
+--- !u!114 &1933670543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933670538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c96061092a5d24c8404415ddde0087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMoveObj: {fileID: 1035224830}
 --- !u!114 &1933670544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32799,7 +32815,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118253136}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.12649167, y: -0.22889423, z: 0.1402452}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1705071983}
