@@ -65,6 +65,7 @@ function generateIPAddresses(){
 
         //let concatIp = `${ipAddOct1_Lvl1}.${ipAddOct2_Lvl1}.${ipAddOct3}.${ipAddOct4}`;
         let ipObj = {octets: [ipAddOct1_Lvl1, ipAddOct2_Lvl1, ipAddOct3, ipAddOct4]};
+        ipObj.child = [];
 
         let hasChild = rand.floatBetween(0, 1) > childSpawn[0] ? true : false;
 
@@ -72,12 +73,14 @@ function generateIPAddresses(){
         {
             let ipAddOct1_Lvl2 = rand(255);
             let ipAddOct2_Lvl2 = rand(255);
+            
+            let randChildCount = rand(ipCount[1]) + 1
 
-            for (let i = 0; i < ipCount[1]; i++)
+            for (let i = 0; i < randChildCount; i++)
             {
                 ipAddOct3 = rand(255);
                 ipAddOct4 = rand(255);
-                ipObj.child = {octets: [ipAddOct1_Lvl2, ipAddOct2_Lvl2, ipAddOct3, ipAddOct4]};
+                ipObj.child.push( {octets: [ipAddOct1_Lvl2, ipAddOct2_Lvl2, ipAddOct3, ipAddOct4], child: []});
             }
         }
 
