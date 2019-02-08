@@ -43,18 +43,33 @@ public class LoadNetworkData : MonoBehaviour
         {
             string res = req.downloadHandler.text;
             HostDataPackage hdp = JsonUtility.FromJson<HostDataPackage>(res);
-            foreach ( var n in hdp.data)
-            {
-                Debug.Log($"{n.octets[0]}.{n.octets[1]}.{n.octets[2]}.{n.octets[3]}");
+            //foreach ( var n in hdp.data)
+            //{
+            //   // Debug.Log($"{n.octets[0]}.{n.octets[1]}.{n.octets[2]}.{n.octets[3]}");
+            //}
 
-            }
+            finishedLoadingData(new LoadingNetworkDataArgs(hdp), this);
         }
     }
+
+    public event FinishedLoadingData finishedLoadingData;
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+}
+
+public delegate void FinishedLoadingData(LoadingNetworkDataArgs args, object sender);
+
+public class LoadingNetworkDataArgs : EventArgs
+{
+    public HostDataPackage HDP { get; private set; }
+
+    public LoadingNetworkDataArgs(HostDataPackage hdp) : base()
+    {
+        this.HDP = hdp;
     }
 }
 
@@ -69,5 +84,5 @@ public class HostDataPackage
 public class HostNode
 {
     public int[] octets;
-    public HostNode[] children;
+    public HostNode[] child;
 }
