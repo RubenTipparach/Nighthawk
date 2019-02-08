@@ -1,20 +1,18 @@
 'use strict';
 
-var express = require('express'),
+const express = require('express'),
     bodyParser = require('body-parser');
 
-var cors = require('cors');
+    const cors = require('cors');
 
-var colors = require('colors');
-var strFormat = require('string-format');
+const colors = require('colors');
+const strFormat = require('string-format');
 
-var logger = require('./logger.js');
+const logger = require('./logger.js');
 
 // config stuff
-var yaml = require('js-yaml');
-var fs = require('fs');
-var fileUpload = require('express-fileupload');
-const sqlite3 = require('sqlite3').verbose();
+const yaml = require('js-yaml');
+const fs = require('fs');
 
 var config = null;
 try {
@@ -24,31 +22,27 @@ try {
     logger.error(e);
 }
 
-var app = express();
+const low = require('lowdb')
+const FileSync = require('lowdb/adapters/FileSync')
+const adapter = new FileSync('db.json')
+const db = low(adapter)
 
+const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
-
 
 app.listen(config.network.port, () => {
     logger.info(`Map started on port ${config.network.port.toString().green.bold}`);
 });
 
-let db = new sqlite3.Database('./db/default.db', (err) => {
-    if (err) {
-        console.error(err.message);
-    }
-    console.log('Connected to the default db database.');
-});
-
-db.close();
-
 app.get('/', (req,res) => {
 	res.send('Node API Server is online');
 });
 
-
+app.get('/get/ipAddresses', (req,res) => {
+    res.send({data : db.get('ipAddressMap').value()[0]});
+})
 
 const ipFound = [
 {
