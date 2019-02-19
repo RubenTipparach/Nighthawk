@@ -15,10 +15,10 @@ A VR based environment for execution of cyber attack simulations.
 ## Version progression
 
 - v0.1 envision the universe as buildings
-![v 0.1](v.1.jpg)
+![v 0.1](/images/v.1.png)
 
 - v0.2 traditional graph rendering. Might have assigned too many connections, and added redundant ones too. Will need clean up for more usability.
-![v 0.2](v.2.jpg)
+![v 0.2](/images/v.2.png)
 
 # Visuals inspired by this repo.
 https://github.com/tedsluis/nmap
