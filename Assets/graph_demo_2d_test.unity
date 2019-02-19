@@ -112,6 +112,58 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &201489248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 201489249}
+  - component: {fileID: 201489250}
+  m_Layer: 0
+  m_Name: GraphedStructure
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &201489249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201489248}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1705071983}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &201489250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201489248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a19f12756a46ded4da426dc6b5bfcca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadNetworkDataV2: {fileID: 2118253139}
+  nodePrefab: {fileID: 2104068050918957309, guid: db4fb440f3fec1749a4dea22302711f9,
+    type: 3}
+  lineMat: {fileID: 2100000, guid: 89069f0fe6b97ea42b44e4ce1ddfee9c, type: 2}
+  nodeMat: {fileID: 2100000, guid: 336c8ac70fe891a48a80091a2fd4bea3, type: 2}
+  textPrefab: {fileID: 5544712962785086480, guid: 3c50e9fd6d21f5a429d087bb6c6e5247,
+    type: 3}
+  linePrefab: {fileID: 6342646366298518925, guid: 8c12e14bd5b2f574a98a7740e339800c,
+    type: 3}
 --- !u!1 &327784168
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,7 +315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1035224830
 Transform:
   m_ObjectHideFlags: 0
@@ -661,6 +713,7 @@ Transform:
   m_Children:
   - {fileID: 2118253138}
   - {fileID: 1035224830}
+  - {fileID: 201489249}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

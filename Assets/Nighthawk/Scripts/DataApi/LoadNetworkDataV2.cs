@@ -97,6 +97,7 @@ public class LoadNetworkDataV2 : MonoBehaviour
         public int[] connections;
 
         public int[] ports;
+
     }
 }
 
