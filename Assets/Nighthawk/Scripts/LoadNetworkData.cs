@@ -83,9 +83,17 @@ public class LoadingNetworkDataArgs : EventArgs
 {
     public HostDataPackage HDP { get; private set; }
 
+    public LoadNetworkDataV2.HostDataPackage2 HDP2 { get; private set; }
+
+
     public LoadingNetworkDataArgs(HostDataPackage hdp) : base()
     {
         this.HDP = hdp;
+    }
+
+    public LoadingNetworkDataArgs(LoadNetworkDataV2.HostDataPackage2 hdp) : base()
+    {
+        this.HDP2 = hdp;
     }
 }
 
