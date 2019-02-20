@@ -13,23 +13,6 @@ var logger = require('./logger.js');
 db.defaults({ data: []})
   .write();
 
-//// Add a post
-// db.get('ipAddressMap')
-//   .push({ id: 1, title: 'test'})
-//   .write();
-
-// // Set a user using Lodash shorthand syntax
-// db.set('meta.test', 'test complete')
-//   .write();
-  
-// // Increment count
-// db.update('count', n => n + 1)
-//     .write();
-
-// db.get('ipAddressMap')
-//   .find({ id: 1 })
-//   .value();
-
 // ip parameters = [depth1 count, depth2 count, depth 3 count]
 const ipCount = 100;
 const seed = 42;
@@ -60,8 +43,12 @@ const ipFound = [
         ports: [20,11,80,225,3001]
     }
 ];
+const connectionsRange = [1, 4];
+const portsRange =[5, 10];
 
 generateIPAddresses();
+
+
 
 function generateIPAddresses(){
 
@@ -86,8 +73,8 @@ function generateIPAddresses(){
 
 
         // host.child = [];
-        let numOfconnections = rand.intBetween(1, 10);
-        let numOfports = rand.intBetween(5, 10);
+        let numOfconnections = rand.intBetween(connectionsRange[0], connectionsRange[1]);
+        let numOfports = rand.intBetween(portsRange[0], portsRange[1]);
         host.connections = [];
         host.ports = [];
 
@@ -107,8 +94,7 @@ function generateIPAddresses(){
 
 
 
-    db.get('data')
-       .push(hosts)
+    db.set('data', hosts)
        .write();
        
     logger.debug(hosts);
