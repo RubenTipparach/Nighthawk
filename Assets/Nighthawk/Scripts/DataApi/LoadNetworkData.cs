@@ -9,6 +9,10 @@ public class LoadNetworkData : MonoBehaviour
     [SerializeField]
     private string hostAddress = "http://localhost:3001/";
 
+    public bool offlineMode = false;
+
+    public TextAsset txt;
+
     public static string SERVER_HOST
     {
         get;
@@ -25,7 +29,19 @@ public class LoadNetworkData : MonoBehaviour
     {
         SERVER_HOST = hostAddress;
 
-        StartCoroutine(getNodes());
+        if (offlineMode)
+        {
+           // = (TextAsset)Resources.Load("db.json", typeof(TextAsset));
+
+            string res = txt.text;
+            HostDataPackage hdp = JsonUtility.FromJson<HostDataPackage>(res);
+        
+            finishedLoadingData(new LoadingNetworkDataArgs(hdp), this);
+        }
+        else
+        {
+            StartCoroutine(getNodes());
+        }
     }
 
     IEnumerator getNodes()
@@ -67,9 +83,17 @@ public class LoadingNetworkDataArgs : EventArgs
 {
     public HostDataPackage HDP { get; private set; }
 
+    public LoadNetworkDataV2.HostDataPackage2 HDP2 { get; private set; }
+
+
     public LoadingNetworkDataArgs(HostDataPackage hdp) : base()
     {
         this.HDP = hdp;
+    }
+
+    public LoadingNetworkDataArgs(LoadNetworkDataV2.HostDataPackage2 hdp) : base()
+    {
+        this.HDP2 = hdp;
     }
 }
 
@@ -85,4 +109,5 @@ public class HostNode
 {
     public int[] octets;
     public HostNode[] child;
+
 }

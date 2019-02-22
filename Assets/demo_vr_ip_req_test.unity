@@ -30591,6 +30591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetMoveObj: {fileID: 1035224830}
+  distanceMultiplier: 10
 --- !u!114 &1933670544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32807,6 +32808,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hostAddress: http://localhost:3001/
+  offlineMode: 1
+  txt: {fileID: 4900000, guid: 37e58d3ec37368f45b8c964044b43944, type: 3}
 --- !u!4 &2118253138
 Transform:
   m_ObjectHideFlags: 0

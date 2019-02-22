@@ -1,0 +1,3869 @@
+{
+  "data": [
+      {
+        "id": 0,
+        "octets": [
+          78,
+          192,
+          137,
+          47
+        ],
+        "macAddress": [
+          105,
+          20,
+          77,
+          30,
+          211,
+          223
+        ],
+        "status": 1,
+        "latency": 178,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          80,
+          89,
+          28,
+          75,
+          1,
+          55,
+          60
+        ],
+        "ports": [
+          4158,
+          4416,
+          1732,
+          4573,
+          3177,
+          717,
+          3168,
+          4370,
+          3757,
+          1217
+        ]
+      },
+      {
+        "id": 1,
+        "octets": [
+          170,
+          115,
+          75,
+          111
+        ],
+        "macAddress": [
+          16,
+          125,
+          41,
+          157,
+          119,
+          89
+        ],
+        "status": 1,
+        "latency": 327,
+        "deviceType": "General Purpose",
+        "os": "Raspbian 8.9",
+        "connections": [
+          52,
+          79,
+          75,
+          56,
+          48,
+          16,
+          53,
+          50
+        ],
+        "ports": [
+          3307,
+          1104,
+          1750,
+          212,
+          4059,
+          2920,
+          3120,
+          409,
+          60,
+          77
+        ]
+      },
+      {
+        "id": 2,
+        "octets": [
+          119,
+          34,
+          87,
+          73
+        ],
+        "macAddress": [
+          161,
+          94,
+          100,
+          1,
+          55,
+          84
+        ],
+        "status": 1,
+        "latency": 184,
+        "deviceType": "General Purpose",
+        "os": "Ubuntu 18.04 LTS",
+        "connections": [
+          0,
+          8,
+          25,
+          61,
+          33,
+          35
+        ],
+        "ports": [
+          1191,
+          3848,
+          2777,
+          3327,
+          3778,
+          3191,
+          2533
+        ]
+      },
+      {
+        "id": 3,
+        "octets": [
+          201,
+          210,
+          23,
+          253
+        ],
+        "macAddress": [
+          207,
+          130,
+          29,
+          232,
+          82,
+          57
+        ],
+        "status": 1,
+        "latency": 320,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          5,
+          66,
+          52,
+          29,
+          15,
+          57
+        ],
+        "ports": [
+          2769,
+          1030,
+          897,
+          4853,
+          4497
+        ]
+      },
+      {
+        "id": 4,
+        "octets": [
+          92,
+          60,
+          146,
+          1
+        ],
+        "macAddress": [
+          202,
+          203,
+          124,
+          126,
+          85,
+          185
+        ],
+        "status": 1,
+        "latency": 426,
+        "deviceType": "General Purpose",
+        "os": "Ubuntu 18.04 LTS",
+        "connections": [
+          40,
+          45,
+          94,
+          7
+        ],
+        "ports": [
+          4103,
+          459,
+          2543,
+          264,
+          1860
+        ]
+      },
+      {
+        "id": 5,
+        "octets": [
+          48,
+          155,
+          140,
+          215
+        ],
+        "macAddress": [
+          245,
+          109,
+          10,
+          59,
+          61,
+          31
+        ],
+        "status": 1,
+        "latency": 334,
+        "deviceType": "General Purpose",
+        "os": "Windows 90000 SP4.5",
+        "connections": [
+          66,
+          83,
+          86,
+          88,
+          17,
+          12,
+          52
+        ],
+        "ports": [
+          3622,
+          917,
+          24,
+          4898,
+          828,
+          3062,
+          903,
+          75,
+          711,
+          2326
+        ]
+      },
+      {
+        "id": 6,
+        "octets": [
+          183,
+          99,
+          91,
+          46
+        ],
+        "macAddress": [
+          64,
+          136,
+          91,
+          244,
+          5,
+          171
+        ],
+        "status": 1,
+        "latency": 284,
+        "deviceType": "General Purpose",
+        "os": "Windows 90000 SP4.5",
+        "connections": [
+          33,
+          25,
+          73,
+          65,
+          82,
+          72,
+          14,
+          27,
+          9
+        ],
+        "ports": [
+          4678,
+          4314,
+          1620,
+          4704,
+          1398,
+          2071,
+          187
+        ]
+      },
+      {
+        "id": 7,
+        "octets": [
+          127,
+          250,
+          128,
+          122
+        ],
+        "macAddress": [
+          193,
+          47,
+          22,
+          98,
+          19,
+          215
+        ],
+        "status": 1,
+        "latency": 315,
+        "deviceType": "General Purpose",
+        "os": "Raspbian 8.9",
+        "connections": [
+          68,
+          6,
+          63,
+          15,
+          73,
+          80,
+          95,
+          68,
+          61
+        ],
+        "ports": [
+          2299,
+          3602,
+          4606,
+          2058,
+          3559,
+          4982,
+          2530,
+          3773,
+          4189
+        ]
+      },
+      {
+        "id": 8,
+        "octets": [
+          56,
+          4,
+          213,
+          104
+        ],
+        "macAddress": [
+          198,
+          47,
+          216,
+          151,
+          181,
+          191
+        ],
+        "status": 1,
+        "latency": 349,
+        "deviceType": "General Purpose",
+        "os": "Windows 90000 SP4.5",
+        "connections": [
+          85,
+          11,
+          96,
+          36
+        ],
+        "ports": [
+          812,
+          2984,
+          1627,
+          2500,
+          4804,
+          1370,
+          3887,
+          4813,
+          4175,
+          4876
+        ]
+      },
+      {
+        "id": 9,
+        "octets": [
+          236,
+          61,
+          210,
+          129
+        ],
+        "macAddress": [
+          131,
+          63,
+          192,
+          97,
+          101,
+          188
+        ],
+        "status": 1,
+        "latency": 220,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          14,
+          49
+        ],
+        "ports": [
+          1623,
+          425,
+          2526,
+          254,
+          4492,
+          2666
+        ]
+      },
+      {
+        "id": 10,
+        "octets": [
+          17,
+          211,
+          172,
+          133
+        ],
+        "macAddress": [
+          147,
+          71,
+          72,
+          156,
+          231,
+          8
+        ],
+        "status": 1,
+        "latency": 122,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          94,
+          62,
+          78,
+          6,
+          31,
+          73,
+          57,
+          38
+        ],
+        "ports": [
+          2947,
+          3904,
+          3140,
+          4585,
+          3779,
+          2525,
+          2060,
+          4470,
+          432
+        ]
+      },
+      {
+        "id": 11,
+        "octets": [
+          16,
+          238,
+          241,
+          37
+        ],
+        "macAddress": [
+          43,
+          69,
+          117,
+          120,
+          93,
+          243
+        ],
+        "status": 1,
+        "latency": 444,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          18,
+          64,
+          98,
+          41,
+          41
+        ],
+        "ports": [
+          403,
+          3977,
+          4428,
+          19,
+          4068,
+          86,
+          4970,
+          2220,
+          1799
+        ]
+      },
+      {
+        "id": 12,
+        "octets": [
+          193,
+          229,
+          119,
+          19
+        ],
+        "macAddress": [
+          195,
+          113,
+          176,
+          33,
+          169,
+          170
+        ],
+        "status": 1,
+        "latency": 481,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          46,
+          42,
+          17,
+          95,
+          29,
+          45,
+          76,
+          68,
+          85
+        ],
+        "ports": [
+          1771,
+          1436,
+          109,
+          3049,
+          4041,
+          2324,
+          1629,
+          538,
+          4288,
+          1296
+        ]
+      },
+      {
+        "id": 13,
+        "octets": [
+          225,
+          104,
+          97,
+          44
+        ],
+        "macAddress": [
+          172,
+          4,
+          228,
+          64,
+          63,
+          192
+        ],
+        "status": 1,
+        "latency": 207,
+        "deviceType": "General Purpose",
+        "os": "Raspbian 8.9",
+        "connections": [
+          3,
+          11,
+          84
+        ],
+        "ports": [
+          3418,
+          917,
+          4216,
+          784,
+          3075,
+          509,
+          3155
+        ]
+      },
+      {
+        "id": 14,
+        "octets": [
+          24,
+          187,
+          133,
+          235
+        ],
+        "macAddress": [
+          51,
+          253,
+          165,
+          193,
+          220,
+          202
+        ],
+        "status": 1,
+        "latency": 474,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          44,
+          93
+        ],
+        "ports": [
+          2831,
+          3282,
+          1728,
+          4117,
+          2107,
+          274,
+          898,
+          918,
+          2116,
+          3119
+        ]
+      },
+      {
+        "id": 15,
+        "octets": [
+          183,
+          70,
+          4,
+          78
+        ],
+        "macAddress": [
+          126,
+          214,
+          26,
+          53,
+          61,
+          158
+        ],
+        "status": 1,
+        "latency": 383,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          69
+        ],
+        "ports": [
+          963,
+          4956,
+          2329,
+          3539,
+          3643,
+          1129,
+          3231,
+          1780,
+          3971
+        ]
+      },
+      {
+        "id": 16,
+        "octets": [
+          216,
+          226,
+          148,
+          141
+        ],
+        "macAddress": [
+          105,
+          255,
+          99,
+          21,
+          225,
+          153
+        ],
+        "status": 1,
+        "latency": 230,
+        "deviceType": "General Purpose",
+        "os": "Raspbian 8.9",
+        "connections": [
+          57,
+          89,
+          59,
+          47,
+          60,
+          69,
+          62
+        ],
+        "ports": [
+          1562,
+          1616,
+          6,
+          4406,
+          1559,
+          576,
+          2411,
+          3746,
+          2022,
+          312
+        ]
+      },
+      {
+        "id": 17,
+        "octets": [
+          227,
+          112,
+          188,
+          151
+        ],
+        "macAddress": [
+          240,
+          77,
+          236,
+          69,
+          76,
+          188
+        ],
+        "status": 1,
+        "latency": 384,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          25
+        ],
+        "ports": [
+          1162,
+          4590,
+          337,
+          2137,
+          3136,
+          1897,
+          4707,
+          432,
+          3003
+        ]
+      },
+      {
+        "id": 18,
+        "octets": [
+          253,
+          39,
+          7,
+          163
+        ],
+        "macAddress": [
+          98,
+          214,
+          148,
+          195,
+          77,
+          81
+        ],
+        "status": 1,
+        "latency": 487,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          72,
+          30,
+          18,
+          49,
+          88,
+          37
+        ],
+        "ports": [
+          4385,
+          3045,
+          2416,
+          1140,
+          2688,
+          2683,
+          3071,
+          2461,
+          4814,
+          4946
+        ]
+      },
+      {
+        "id": 19,
+        "octets": [
+          26,
+          2,
+          45,
+          134
+        ],
+        "macAddress": [
+          48,
+          63,
+          204,
+          34,
+          79,
+          204
+        ],
+        "status": 1,
+        "latency": 337,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          69,
+          96,
+          25,
+          32,
+          59,
+          5,
+          37
+        ],
+        "ports": [
+          817,
+          1943,
+          2120,
+          574,
+          455,
+          260
+        ]
+      },
+      {
+        "id": 20,
+        "octets": [
+          44,
+          139,
+          102,
+          81
+        ],
+        "macAddress": [
+          11,
+          142,
+          205,
+          85,
+          195,
+          22
+        ],
+        "status": 1,
+        "latency": 292,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          57,
+          45,
+          54,
+          98,
+          83,
+          49,
+          48,
+          52,
+          79,
+          84
+        ],
+        "ports": [
+          2752,
+          4512,
+          3479,
+          4707,
+          2254,
+          3198,
+          1509
+        ]
+      },
+      {
+        "id": 21,
+        "octets": [
+          107,
+          40,
+          123,
+          121
+        ],
+        "macAddress": [
+          178,
+          1,
+          253,
+          171,
+          73,
+          26
+        ],
+        "status": 1,
+        "latency": 227,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          5,
+          88,
+          58,
+          40,
+          27,
+          5
+        ],
+        "ports": [
+          1445,
+          3844,
+          4886,
+          680,
+          1604,
+          1927,
+          4778
+        ]
+      },
+      {
+        "id": 22,
+        "octets": [
+          145,
+          115,
+          105,
+          73
+        ],
+        "macAddress": [
+          2,
+          170,
+          190,
+          60,
+          238,
+          154
+        ],
+        "status": 1,
+        "latency": 461,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          31,
+          16,
+          31,
+          32,
+          84,
+          75
+        ],
+        "ports": [
+          745,
+          1750,
+          1407,
+          4976,
+          2893,
+          4015,
+          507,
+          749,
+          2144
+        ]
+      },
+      {
+        "id": 23,
+        "octets": [
+          132,
+          169,
+          27,
+          23
+        ],
+        "macAddress": [
+          198,
+          91,
+          182,
+          49,
+          183,
+          152
+        ],
+        "status": 1,
+        "latency": 100,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          93,
+          70,
+          14,
+          17,
+          90,
+          0,
+          8,
+          2,
+          20
+        ],
+        "ports": [
+          3154,
+          1399,
+          2438,
+          917,
+          3509,
+          4941,
+          4626,
+          3058
+        ]
+      },
+      {
+        "id": 24,
+        "octets": [
+          77,
+          165,
+          129,
+          40
+        ],
+        "macAddress": [
+          251,
+          93,
+          245,
+          75,
+          11,
+          22
+        ],
+        "status": 1,
+        "latency": 485,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          80,
+          13,
+          31,
+          55,
+          84
+        ],
+        "ports": [
+          3453,
+          4006,
+          4272,
+          1443,
+          2719,
+          4892,
+          1891
+        ]
+      },
+      {
+        "id": 25,
+        "octets": [
+          99,
+          52,
+          129,
+          211
+        ],
+        "macAddress": [
+          212,
+          189,
+          143,
+          34,
+          193,
+          132
+        ],
+        "status": 1,
+        "latency": 498,
+        "deviceType": "General Purpose",
+        "os": "Windows 90000 SP4.5",
+        "connections": [
+          15
+        ],
+        "ports": [
+          3741,
+          953,
+          4792,
+          4063,
+          3424,
+          3413,
+          917,
+          3078,
+          1074,
+          1222
+        ]
+      },
+      {
+        "id": 26,
+        "octets": [
+          185,
+          204,
+          158,
+          12
+        ],
+        "macAddress": [
+          21,
+          104,
+          64,
+          25,
+          185,
+          253
+        ],
+        "status": 1,
+        "latency": 466,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          44,
+          69,
+          24
+        ],
+        "ports": [
+          1105,
+          3684,
+          4457,
+          3575,
+          4439
+        ]
+      },
+      {
+        "id": 27,
+        "octets": [
+          212,
+          41,
+          125,
+          206
+        ],
+        "macAddress": [
+          16,
+          68,
+          17,
+          151,
+          1,
+          3
+        ],
+        "status": 1,
+        "latency": 236,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          27,
+          29,
+          70
+        ],
+        "ports": [
+          4372,
+          4948,
+          4357,
+          4350,
+          2027,
+          2458
+        ]
+      },
+      {
+        "id": 28,
+        "octets": [
+          97,
+          115,
+          106,
+          133
+        ],
+        "macAddress": [
+          25,
+          111,
+          179,
+          44,
+          56,
+          35
+        ],
+        "status": 1,
+        "latency": 112,
+        "deviceType": "General Purpose",
+        "os": "MacOSX - Poodle",
+        "connections": [
+          68,
+          9,
+          74
+        ],
+        "ports": [
+          4155,
+          889,
+          2108,
+          2923,
+          24,
+          1272,
+          2787,
+          3928
+        ]
+      },
+      {
+        "id": 29,
+        "octets": [
+          71,
+          50,
+          218,
+          247
+        ],
+        "macAddress": [
+          92,
+          213,
+          229,
+          234,
+          136,
+          234
+        ],
+        "status": 1,
+        "latency": 157,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          50,
+          14,
+          70,
+          68,
+          58,
+          3
+        ],
+        "ports": [
+          4622,
+          2305,
+          54,
+          1263,
+          3506,
+          3315,
+          3892,
+          818
+        ]
+      },
+      {
+        "id": 30,
+        "octets": [
+          233,
+          7,
+          97,
+          151
+        ],
+        "macAddress": [
+          39,
+          228,
+          4,
+          216,
+          197,
+          148
+        ],
+        "status": 1,
+        "latency": 411,
+        "deviceType": "General Purpose",
+        "os": "Windows 90000 SP4.5",
+        "connections": [
+          35
+        ],
+        "ports": [
+          3471,
+          3021,
+          347,
+          3881,
+          4741,
+          4805,
+          3034,
+          2557,
+          1542,
+          4396
+        ]
+      },
+      {
+        "id": 31,
+        "octets": [
+          225,
+          98,
+          32,
+          197
+        ],
+        "macAddress": [
+          2,
+          139,
+          216,
+          33,
+          154,
+          33
+        ],
+        "status": 1,
+        "latency": 159,
+        "deviceType": "General Purpose",
+        "os": "Windows 90000 SP4.5",
+        "connections": [
+          20
+        ],
+        "ports": [
+          3712,
+          4995,
+          117,
+          3127,
+          3148,
+          1722,
+          4907
+        ]
+      },
+      {
+        "id": 32,
+        "octets": [
+          221,
+          56,
+          39,
+          136
+        ],
+        "macAddress": [
+          13,
+          114,
+          81,
+          145,
+          127,
+          99
+        ],
+        "status": 1,
+        "latency": 139,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          15,
+          11,
+          12,
+          46,
+          87,
+          5,
+          71,
+          9,
+          86,
+          81
+        ],
+        "ports": [
+          3707,
+          162,
+          1954,
+          2578,
+          3802,
+          3803,
+          675,
+          4312,
+          3134,
+          2811
+        ]
+      },
+      {
+        "id": 33,
+        "octets": [
+          81,
+          126,
+          142,
+          36
+        ],
+        "macAddress": [
+          154,
+          133,
+          90,
+          43,
+          222,
+          6
+        ],
+        "status": 1,
+        "latency": 400,
+        "deviceType": "General Purpose",
+        "os": "MacOSX - Poodle",
+        "connections": [
+          41,
+          42,
+          88,
+          68
+        ],
+        "ports": [
+          20,
+          4937,
+          4504,
+          4614,
+          3114,
+          2745,
+          3585
+        ]
+      },
+      {
+        "id": 34,
+        "octets": [
+          163,
+          202,
+          30,
+          215
+        ],
+        "macAddress": [
+          110,
+          100,
+          243,
+          101,
+          172,
+          175
+        ],
+        "status": 1,
+        "latency": 449,
+        "deviceType": "General Purpose",
+        "os": "Raspbian 8.9",
+        "connections": [
+          53
+        ],
+        "ports": [
+          3695,
+          3560,
+          3904,
+          3026,
+          4901,
+          1830,
+          2911,
+          3790
+        ]
+      },
+      {
+        "id": 35,
+        "octets": [
+          17,
+          29,
+          91,
+          5
+        ],
+        "macAddress": [
+          252,
+          216,
+          212,
+          254,
+          109,
+          169
+        ],
+        "status": 1,
+        "latency": 331,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          90,
+          30,
+          67,
+          0,
+          11,
+          83,
+          59,
+          99
+        ],
+        "ports": [
+          4359,
+          2447,
+          16,
+          2469,
+          4058,
+          491,
+          1262
+        ]
+      },
+      {
+        "id": 36,
+        "octets": [
+          162,
+          255,
+          67,
+          39
+        ],
+        "macAddress": [
+          101,
+          40,
+          67,
+          217,
+          19,
+          153
+        ],
+        "status": 1,
+        "latency": 212,
+        "deviceType": "General Purpose",
+        "os": "Windows 90000 SP4.5",
+        "connections": [
+          3,
+          37,
+          63,
+          21
+        ],
+        "ports": [
+          3970,
+          1591,
+          3466,
+          704,
+          1488,
+          502,
+          2296,
+          2419
+        ]
+      },
+      {
+        "id": 37,
+        "octets": [
+          135,
+          97,
+          205,
+          93
+        ],
+        "macAddress": [
+          186,
+          25,
+          106,
+          141,
+          99,
+          0
+        ],
+        "status": 1,
+        "latency": 258,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          98,
+          26,
+          74,
+          72,
+          74,
+          62,
+          17
+        ],
+        "ports": [
+          2235,
+          3403,
+          3213,
+          2293,
+          4490,
+          1251
+        ]
+      },
+      {
+        "id": 38,
+        "octets": [
+          241,
+          114,
+          118,
+          12
+        ],
+        "macAddress": [
+          24,
+          211,
+          64,
+          218,
+          85,
+          95
+        ],
+        "status": 1,
+        "latency": 477,
+        "deviceType": "General Purpose",
+        "os": "MacOSX - Poodle",
+        "connections": [
+          17,
+          39,
+          54,
+          25
+        ],
+        "ports": [
+          4224,
+          1848,
+          4943,
+          3715,
+          3068,
+          3329,
+          2083,
+          2012
+        ]
+      },
+      {
+        "id": 39,
+        "octets": [
+          95,
+          227,
+          187,
+          141
+        ],
+        "macAddress": [
+          161,
+          170,
+          246,
+          232,
+          129,
+          36
+        ],
+        "status": 1,
+        "latency": 444,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          73
+        ],
+        "ports": [
+          147,
+          4267,
+          3523,
+          2027,
+          3639,
+          2948,
+          3003,
+          3102,
+          1197,
+          777
+        ]
+      },
+      {
+        "id": 40,
+        "octets": [
+          105,
+          211,
+          68,
+          97
+        ],
+        "macAddress": [
+          92,
+          101,
+          58,
+          21,
+          32,
+          202
+        ],
+        "status": 1,
+        "latency": 322,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          47,
+          62,
+          48,
+          96,
+          78,
+          53,
+          5
+        ],
+        "ports": [
+          702,
+          138,
+          150,
+          2134,
+          1756,
+          3942,
+          1383,
+          2665,
+          1708
+        ]
+      },
+      {
+        "id": 41,
+        "octets": [
+          68,
+          191,
+          202,
+          16
+        ],
+        "macAddress": [
+          33,
+          220,
+          65,
+          13,
+          221,
+          85
+        ],
+        "status": 1,
+        "latency": 130,
+        "deviceType": "General Purpose",
+        "os": "MacOSX - Poodle",
+        "connections": [
+          25,
+          52,
+          24,
+          67,
+          85,
+          32,
+          4
+        ],
+        "ports": [
+          1438,
+          4023,
+          4844,
+          4564,
+          2503,
+          1673,
+          626,
+          2900
+        ]
+      },
+      {
+        "id": 42,
+        "octets": [
+          180,
+          24,
+          106,
+          236
+        ],
+        "macAddress": [
+          177,
+          151,
+          204,
+          235,
+          7,
+          181
+        ],
+        "status": 1,
+        "latency": 422,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          59,
+          71,
+          35,
+          98,
+          4,
+          83,
+          91,
+          29
+        ],
+        "ports": [
+          1086,
+          3820,
+          3895,
+          4852,
+          4759,
+          3709,
+          1150,
+          1795,
+          4395
+        ]
+      },
+      {
+        "id": 43,
+        "octets": [
+          142,
+          252,
+          222,
+          19
+        ],
+        "macAddress": [
+          252,
+          99,
+          103,
+          42,
+          122,
+          245
+        ],
+        "status": 1,
+        "latency": 121,
+        "deviceType": "General Purpose",
+        "os": "Raspbian 8.9",
+        "connections": [
+          76,
+          47,
+          19,
+          82,
+          8,
+          81
+        ],
+        "ports": [
+          4943,
+          3167,
+          3756,
+          2466,
+          861,
+          2911,
+          1938,
+          776
+        ]
+      },
+      {
+        "id": 44,
+        "octets": [
+          94,
+          200,
+          98,
+          15
+        ],
+        "macAddress": [
+          173,
+          45,
+          94,
+          212,
+          51,
+          116
+        ],
+        "status": 1,
+        "latency": 279,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          13
+        ],
+        "ports": [
+          933,
+          4943,
+          420,
+          2555,
+          4809,
+          2549,
+          4953
+        ]
+      },
+      {
+        "id": 45,
+        "octets": [
+          81,
+          26,
+          86,
+          63
+        ],
+        "macAddress": [
+          79,
+          204,
+          243,
+          228,
+          103,
+          156
+        ],
+        "status": 1,
+        "latency": 238,
+        "deviceType": "General Purpose",
+        "os": "Windows 90000 SP4.5",
+        "connections": [
+          44,
+          48,
+          65,
+          29,
+          0,
+          51,
+          45,
+          87,
+          1
+        ],
+        "ports": [
+          514,
+          1370,
+          1718,
+          1925,
+          4157,
+          4479,
+          4694,
+          4385
+        ]
+      },
+      {
+        "id": 46,
+        "octets": [
+          215,
+          17,
+          236,
+          73
+        ],
+        "macAddress": [
+          243,
+          138,
+          222,
+          81,
+          55,
+          183
+        ],
+        "status": 1,
+        "latency": 401,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          84
+        ],
+        "ports": [
+          4727,
+          2280,
+          4581,
+          1575,
+          2030,
+          4469
+        ]
+      },
+      {
+        "id": 47,
+        "octets": [
+          206,
+          162,
+          79,
+          14
+        ],
+        "macAddress": [
+          84,
+          72,
+          211,
+          253,
+          38,
+          155
+        ],
+        "status": 1,
+        "latency": 302,
+        "deviceType": "General Purpose",
+        "os": "Windows 90000 SP4.5",
+        "connections": [
+          47,
+          63,
+          3,
+          7,
+          3
+        ],
+        "ports": [
+          4046,
+          1416,
+          1138,
+          10,
+          1458,
+          410,
+          2964,
+          786
+        ]
+      },
+      {
+        "id": 48,
+        "octets": [
+          207,
+          82,
+          20,
+          205
+        ],
+        "macAddress": [
+          151,
+          13,
+          65,
+          228,
+          204,
+          42
+        ],
+        "status": 1,
+        "latency": 407,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          95,
+          96,
+          98,
+          50,
+          16,
+          18,
+          59,
+          64,
+          59
+        ],
+        "ports": [
+          2982,
+          4218,
+          1769,
+          4857,
+          1789,
+          2117,
+          2316,
+          1988,
+          2700,
+          3163
+        ]
+      },
+      {
+        "id": 49,
+        "octets": [
+          96,
+          233,
+          201,
+          179
+        ],
+        "macAddress": [
+          189,
+          69,
+          178,
+          211,
+          150,
+          71
+        ],
+        "status": 1,
+        "latency": 462,
+        "deviceType": "General Purpose",
+        "os": "Raspbian 8.9",
+        "connections": [
+          67,
+          4,
+          14,
+          12,
+          47,
+          47,
+          76,
+          68
+        ],
+        "ports": [
+          3025,
+          802,
+          4783,
+          1330,
+          2280,
+          2607,
+          4348,
+          189,
+          560
+        ]
+      },
+      {
+        "id": 50,
+        "octets": [
+          51,
+          218,
+          141,
+          103
+        ],
+        "macAddress": [
+          92,
+          30,
+          33,
+          84,
+          31,
+          224
+        ],
+        "status": 1,
+        "latency": 100,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          18,
+          53,
+          97,
+          54,
+          30,
+          71
+        ],
+        "ports": [
+          1320,
+          4827,
+          4201,
+          464,
+          4863,
+          806,
+          2716,
+          3590
+        ]
+      },
+      {
+        "id": 51,
+        "octets": [
+          221,
+          177,
+          204,
+          17
+        ],
+        "macAddress": [
+          224,
+          156,
+          108,
+          83,
+          125,
+          156
+        ],
+        "status": 1,
+        "latency": 300,
+        "deviceType": "General Purpose",
+        "os": "Ubuntu 18.04 LTS",
+        "connections": [
+          50,
+          22,
+          87,
+          41,
+          20
+        ],
+        "ports": [
+          4862,
+          4587,
+          1120,
+          434,
+          1798,
+          1493,
+          1473
+        ]
+      },
+      {
+        "id": 52,
+        "octets": [
+          111,
+          214,
+          153,
+          173
+        ],
+        "macAddress": [
+          24,
+          246,
+          6,
+          215,
+          23,
+          115
+        ],
+        "status": 1,
+        "latency": 185,
+        "deviceType": "General Purpose",
+        "os": "Raspbian 8.9",
+        "connections": [
+          43,
+          86,
+          84,
+          2,
+          51,
+          77,
+          1,
+          14
+        ],
+        "ports": [
+          613,
+          1882,
+          3880,
+          3585,
+          1742
+        ]
+      },
+      {
+        "id": 53,
+        "octets": [
+          174,
+          30,
+          195,
+          172
+        ],
+        "macAddress": [
+          122,
+          99,
+          152,
+          155,
+          24,
+          210
+        ],
+        "status": 1,
+        "latency": 130,
+        "deviceType": "General Purpose",
+        "os": "MacOSX - Poodle",
+        "connections": [
+          76,
+          90,
+          6,
+          81,
+          34,
+          76,
+          73,
+          62,
+          26,
+          13
+        ],
+        "ports": [
+          4592,
+          517,
+          1027,
+          4230,
+          3718,
+          3772,
+          1774
+        ]
+      },
+      {
+        "id": 54,
+        "octets": [
+          2,
+          89,
+          42,
+          80
+        ],
+        "macAddress": [
+          18,
+          40,
+          28,
+          54,
+          7,
+          109
+        ],
+        "status": 1,
+        "latency": 414,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          4,
+          99,
+          94,
+          48,
+          17,
+          97
+        ],
+        "ports": [
+          4736,
+          4905,
+          1094,
+          81,
+          3343,
+          402,
+          2497,
+          578,
+          836
+        ]
+      },
+      {
+        "id": 55,
+        "octets": [
+          158,
+          250,
+          78,
+          206
+        ],
+        "macAddress": [
+          72,
+          114,
+          113,
+          149,
+          113,
+          12
+        ],
+        "status": 1,
+        "latency": 315,
+        "deviceType": "General Purpose",
+        "os": "Raspbian 8.9",
+        "connections": [
+          44,
+          28,
+          6,
+          34,
+          93,
+          63,
+          44,
+          17,
+          16,
+          37
+        ],
+        "ports": [
+          3382,
+          727,
+          4385,
+          434,
+          4371,
+          3414,
+          2535,
+          3059
+        ]
+      },
+      {
+        "id": 56,
+        "octets": [
+          186,
+          2,
+          200,
+          0
+        ],
+        "macAddress": [
+          68,
+          155,
+          124,
+          209,
+          231,
+          247
+        ],
+        "status": 1,
+        "latency": 497,
+        "deviceType": "General Purpose",
+        "os": "Ubuntu 18.04 LTS",
+        "connections": [
+          11,
+          91,
+          12,
+          39,
+          26,
+          41,
+          60,
+          46,
+          8
+        ],
+        "ports": [
+          4762,
+          2269,
+          628,
+          2854,
+          61,
+          1343,
+          3702
+        ]
+      },
+      {
+        "id": 57,
+        "octets": [
+          230,
+          220,
+          228,
+          57
+        ],
+        "macAddress": [
+          4,
+          138,
+          178,
+          175,
+          0,
+          164
+        ],
+        "status": 1,
+        "latency": 194,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          87,
+          29,
+          99,
+          18,
+          82,
+          27
+        ],
+        "ports": [
+          897,
+          1439,
+          2684,
+          767,
+          4498,
+          3743,
+          4428,
+          2330,
+          671,
+          2666
+        ]
+      },
+      {
+        "id": 58,
+        "octets": [
+          74,
+          228,
+          16,
+          167
+        ],
+        "macAddress": [
+          247,
+          254,
+          46,
+          21,
+          127,
+          254
+        ],
+        "status": 1,
+        "latency": 159,
+        "deviceType": "General Purpose",
+        "os": "Windows 90000 SP4.5",
+        "connections": [
+          73,
+          86,
+          62,
+          69,
+          69,
+          59,
+          6,
+          53,
+          58,
+          70
+        ],
+        "ports": [
+          4383,
+          2495,
+          3649,
+          4486,
+          268,
+          3013,
+          707,
+          4129
+        ]
+      },
+      {
+        "id": 59,
+        "octets": [
+          25,
+          31,
+          254,
+          218
+        ],
+        "macAddress": [
+          251,
+          167,
+          248,
+          108,
+          13,
+          199
+        ],
+        "status": 1,
+        "latency": 172,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          96
+        ],
+        "ports": [
+          4165,
+          3128,
+          1795,
+          2059,
+          2685,
+          644,
+          4864,
+          1404
+        ]
+      },
+      {
+        "id": 60,
+        "octets": [
+          13,
+          199,
+          153,
+          211
+        ],
+        "macAddress": [
+          51,
+          139,
+          202,
+          163,
+          233,
+          138
+        ],
+        "status": 1,
+        "latency": 192,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          29,
+          9,
+          68,
+          67,
+          34,
+          3,
+          37,
+          13,
+          30,
+          22
+        ],
+        "ports": [
+          4211,
+          319,
+          1988,
+          51,
+          1129
+        ]
+      },
+      {
+        "id": 61,
+        "octets": [
+          140,
+          85,
+          2,
+          160
+        ],
+        "macAddress": [
+          6,
+          95,
+          69,
+          46,
+          36,
+          21
+        ],
+        "status": 1,
+        "latency": 412,
+        "deviceType": "General Purpose",
+        "os": "Windows 90000 SP4.5",
+        "connections": [
+          72,
+          42,
+          7,
+          51,
+          56,
+          14,
+          61
+        ],
+        "ports": [
+          1123,
+          3135,
+          3827,
+          1897,
+          3884,
+          3450,
+          1108,
+          1533
+        ]
+      },
+      {
+        "id": 62,
+        "octets": [
+          250,
+          147,
+          14,
+          113
+        ],
+        "macAddress": [
+          2,
+          160,
+          87,
+          129,
+          202,
+          158
+        ],
+        "status": 1,
+        "latency": 250,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          9,
+          67,
+          9,
+          13
+        ],
+        "ports": [
+          1400,
+          1249,
+          2642,
+          1313,
+          3144,
+          339
+        ]
+      },
+      {
+        "id": 63,
+        "octets": [
+          224,
+          98,
+          11,
+          210
+        ],
+        "macAddress": [
+          108,
+          159,
+          122,
+          146,
+          102,
+          141
+        ],
+        "status": 1,
+        "latency": 219,
+        "deviceType": "General Purpose",
+        "os": "Raspbian 8.9",
+        "connections": [
+          22,
+          98,
+          88,
+          12,
+          86,
+          39,
+          5,
+          76,
+          97
+        ],
+        "ports": [
+          4093,
+          3914,
+          1063,
+          2918,
+          2263,
+          4422,
+          1507
+        ]
+      },
+      {
+        "id": 64,
+        "octets": [
+          81,
+          40,
+          180,
+          133
+        ],
+        "macAddress": [
+          35,
+          219,
+          54,
+          158,
+          153,
+          155
+        ],
+        "status": 1,
+        "latency": 405,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          10,
+          9,
+          27,
+          28,
+          37,
+          70,
+          37,
+          37,
+          27,
+          95
+        ],
+        "ports": [
+          4373,
+          1576,
+          3109,
+          705,
+          4057
+        ]
+      },
+      {
+        "id": 65,
+        "octets": [
+          111,
+          107,
+          185,
+          136
+        ],
+        "macAddress": [
+          39,
+          79,
+          239,
+          254,
+          208,
+          152
+        ],
+        "status": 1,
+        "latency": 144,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          21,
+          82,
+          60
+        ],
+        "ports": [
+          4710,
+          1598,
+          3850,
+          2715,
+          2523,
+          4216,
+          983,
+          3310,
+          2782
+        ]
+      },
+      {
+        "id": 66,
+        "octets": [
+          94,
+          137,
+          129,
+          164
+        ],
+        "macAddress": [
+          31,
+          77,
+          103,
+          43,
+          30,
+          172
+        ],
+        "status": 1,
+        "latency": 330,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          59,
+          12,
+          88
+        ],
+        "ports": [
+          2359,
+          2861,
+          1957,
+          2457,
+          2547,
+          4426,
+          1709
+        ]
+      },
+      {
+        "id": 67,
+        "octets": [
+          206,
+          211,
+          102,
+          190
+        ],
+        "macAddress": [
+          254,
+          49,
+          220,
+          157,
+          1,
+          212
+        ],
+        "status": 1,
+        "latency": 406,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          16,
+          65,
+          57,
+          90,
+          58,
+          14,
+          31,
+          46
+        ],
+        "ports": [
+          1045,
+          3678,
+          3537,
+          1206,
+          4432,
+          2324
+        ]
+      },
+      {
+        "id": 68,
+        "octets": [
+          23,
+          196,
+          223,
+          50
+        ],
+        "macAddress": [
+          92,
+          149,
+          202,
+          19,
+          70,
+          61
+        ],
+        "status": 1,
+        "latency": 158,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          72,
+          48,
+          70,
+          40,
+          20,
+          1,
+          80,
+          82
+        ],
+        "ports": [
+          2258,
+          1574,
+          4650,
+          3578,
+          2615,
+          4908,
+          912
+        ]
+      },
+      {
+        "id": 69,
+        "octets": [
+          184,
+          157,
+          193,
+          29
+        ],
+        "macAddress": [
+          125,
+          17,
+          14,
+          92,
+          10,
+          140
+        ],
+        "status": 1,
+        "latency": 312,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          87,
+          49,
+          88,
+          30,
+          58,
+          55
+        ],
+        "ports": [
+          882,
+          37,
+          859,
+          3445,
+          4609,
+          2178,
+          3275,
+          817,
+          4625
+        ]
+      },
+      {
+        "id": 70,
+        "octets": [
+          155,
+          18,
+          126,
+          6
+        ],
+        "macAddress": [
+          24,
+          18,
+          3,
+          136,
+          197,
+          113
+        ],
+        "status": 1,
+        "latency": 229,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          17,
+          38,
+          78
+        ],
+        "ports": [
+          2373,
+          101,
+          1915,
+          1549,
+          496,
+          4902,
+          3937
+        ]
+      },
+      {
+        "id": 71,
+        "octets": [
+          139,
+          32,
+          100,
+          131
+        ],
+        "macAddress": [
+          115,
+          78,
+          243,
+          108,
+          110,
+          224
+        ],
+        "status": 1,
+        "latency": 194,
+        "deviceType": "General Purpose",
+        "os": "Raspbian 8.9",
+        "connections": [
+          54,
+          35,
+          86
+        ],
+        "ports": [
+          1048,
+          4861,
+          4231,
+          4017,
+          2005,
+          155,
+          3438,
+          3897,
+          1841
+        ]
+      },
+      {
+        "id": 72,
+        "octets": [
+          131,
+          62,
+          199,
+          84
+        ],
+        "macAddress": [
+          98,
+          4,
+          152,
+          51,
+          144,
+          38
+        ],
+        "status": 1,
+        "latency": 378,
+        "deviceType": "General Purpose",
+        "os": "Raspbian 8.9",
+        "connections": [
+          7,
+          89,
+          31,
+          71,
+          99,
+          92,
+          80,
+          47,
+          84,
+          20
+        ],
+        "ports": [
+          2202,
+          4356,
+          3426,
+          342,
+          4905,
+          898,
+          2126,
+          1746,
+          4309
+        ]
+      },
+      {
+        "id": 73,
+        "octets": [
+          218,
+          192,
+          74,
+          234
+        ],
+        "macAddress": [
+          232,
+          200,
+          123,
+          195,
+          76,
+          97
+        ],
+        "status": 1,
+        "latency": 498,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          97,
+          42,
+          89,
+          41,
+          18,
+          69,
+          20,
+          12,
+          55,
+          43
+        ],
+        "ports": [
+          3011,
+          4313,
+          1687,
+          1359,
+          574
+        ]
+      },
+      {
+        "id": 74,
+        "octets": [
+          59,
+          80,
+          24,
+          98
+        ],
+        "macAddress": [
+          131,
+          110,
+          128,
+          184,
+          87,
+          165
+        ],
+        "status": 1,
+        "latency": 430,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          10,
+          57
+        ],
+        "ports": [
+          393,
+          3369,
+          1135,
+          2836,
+          29,
+          2453,
+          437,
+          2222,
+          1967,
+          1888
+        ]
+      },
+      {
+        "id": 75,
+        "octets": [
+          92,
+          208,
+          9,
+          134
+        ],
+        "macAddress": [
+          129,
+          196,
+          105,
+          60,
+          160,
+          86
+        ],
+        "status": 1,
+        "latency": 386,
+        "deviceType": "General Purpose",
+        "os": "Windows 90000 SP4.5",
+        "connections": [
+          81,
+          91,
+          41,
+          17,
+          25,
+          48,
+          18,
+          90,
+          13
+        ],
+        "ports": [
+          2625,
+          578,
+          2713,
+          4780,
+          1222,
+          1768,
+          1072,
+          776,
+          4117
+        ]
+      },
+      {
+        "id": 76,
+        "octets": [
+          133,
+          193,
+          104,
+          210
+        ],
+        "macAddress": [
+          174,
+          241,
+          142,
+          44,
+          140,
+          195
+        ],
+        "status": 1,
+        "latency": 217,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          56
+        ],
+        "ports": [
+          4877,
+          468,
+          3531,
+          4546,
+          3002,
+          2283
+        ]
+      },
+      {
+        "id": 77,
+        "octets": [
+          177,
+          41,
+          134,
+          41
+        ],
+        "macAddress": [
+          85,
+          186,
+          197,
+          212,
+          188,
+          211
+        ],
+        "status": 1,
+        "latency": 347,
+        "deviceType": "General Purpose",
+        "os": "Ubuntu 18.04 LTS",
+        "connections": [
+          41,
+          46,
+          9,
+          27,
+          4,
+          14,
+          95,
+          30
+        ],
+        "ports": [
+          1642,
+          4505,
+          3332,
+          32,
+          1567
+        ]
+      },
+      {
+        "id": 78,
+        "octets": [
+          26,
+          89,
+          180,
+          103
+        ],
+        "macAddress": [
+          147,
+          185,
+          195,
+          111,
+          24,
+          79
+        ],
+        "status": 1,
+        "latency": 455,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          71,
+          49,
+          38,
+          72,
+          23,
+          14,
+          93,
+          72,
+          24
+        ],
+        "ports": [
+          304,
+          4324,
+          4560,
+          3397,
+          908,
+          4311,
+          4738,
+          2536
+        ]
+      },
+      {
+        "id": 79,
+        "octets": [
+          130,
+          68,
+          153,
+          115
+        ],
+        "macAddress": [
+          80,
+          82,
+          48,
+          150,
+          240,
+          57
+        ],
+        "status": 1,
+        "latency": 263,
+        "deviceType": "General Purpose",
+        "os": "MacOSX - Poodle",
+        "connections": [
+          8
+        ],
+        "ports": [
+          734,
+          4852,
+          3909,
+          3112,
+          1963,
+          2949,
+          4502,
+          3813,
+          1289
+        ]
+      },
+      {
+        "id": 80,
+        "octets": [
+          83,
+          38,
+          112,
+          206
+        ],
+        "macAddress": [
+          93,
+          47,
+          58,
+          144,
+          63,
+          18
+        ],
+        "status": 1,
+        "latency": 365,
+        "deviceType": "General Purpose",
+        "os": "Raspbian 8.9",
+        "connections": [
+          89
+        ],
+        "ports": [
+          1856,
+          2520,
+          3815,
+          3393,
+          4879,
+          4173
+        ]
+      },
+      {
+        "id": 81,
+        "octets": [
+          82,
+          48,
+          215,
+          127
+        ],
+        "macAddress": [
+          188,
+          38,
+          166,
+          167,
+          194,
+          228
+        ],
+        "status": 1,
+        "latency": 280,
+        "deviceType": "General Purpose",
+        "os": "Raspbian 8.9",
+        "connections": [
+          47,
+          34,
+          22,
+          7,
+          90,
+          2,
+          77,
+          47,
+          6
+        ],
+        "ports": [
+          389,
+          3023,
+          1905,
+          2496,
+          4783,
+          3463,
+          3881,
+          1482,
+          3677
+        ]
+      },
+      {
+        "id": 82,
+        "octets": [
+          164,
+          49,
+          177,
+          145
+        ],
+        "macAddress": [
+          20,
+          239,
+          40,
+          75,
+          2,
+          150
+        ],
+        "status": 1,
+        "latency": 299,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          67,
+          63,
+          54,
+          19,
+          85,
+          64
+        ],
+        "ports": [
+          2745,
+          4891,
+          4707,
+          3792,
+          4571,
+          1873,
+          1902,
+          1390,
+          4304,
+          1653
+        ]
+      },
+      {
+        "id": 83,
+        "octets": [
+          224,
+          69,
+          155,
+          105
+        ],
+        "macAddress": [
+          77,
+          218,
+          181,
+          138,
+          150,
+          20
+        ],
+        "status": 1,
+        "latency": 373,
+        "deviceType": "General Purpose",
+        "os": "MacOSX - Poodle",
+        "connections": [
+          82,
+          30,
+          22,
+          68,
+          24,
+          16,
+          27,
+          85,
+          64
+        ],
+        "ports": [
+          3064,
+          1848,
+          2374,
+          3698,
+          2748
+        ]
+      },
+      {
+        "id": 84,
+        "octets": [
+          164,
+          232,
+          62,
+          81
+        ],
+        "macAddress": [
+          158,
+          106,
+          124,
+          67,
+          251,
+          198
+        ],
+        "status": 1,
+        "latency": 273,
+        "deviceType": "General Purpose",
+        "os": "Raspbian 8.9",
+        "connections": [
+          39,
+          17,
+          36
+        ],
+        "ports": [
+          4321,
+          2740,
+          3519,
+          1678,
+          1960,
+          1607,
+          4211,
+          758
+        ]
+      },
+      {
+        "id": 85,
+        "octets": [
+          226,
+          150,
+          164,
+          3
+        ],
+        "macAddress": [
+          167,
+          120,
+          146,
+          74,
+          172,
+          158
+        ],
+        "status": 1,
+        "latency": 187,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          25,
+          11,
+          77,
+          59,
+          38,
+          86,
+          50,
+          26
+        ],
+        "ports": [
+          3064,
+          3017,
+          119,
+          4680,
+          2876,
+          2104,
+          3065,
+          2135,
+          3528
+        ]
+      },
+      {
+        "id": 86,
+        "octets": [
+          235,
+          112,
+          31,
+          33
+        ],
+        "macAddress": [
+          120,
+          160,
+          68,
+          252,
+          193,
+          158
+        ],
+        "status": 1,
+        "latency": 472,
+        "deviceType": "General Purpose",
+        "os": "Windows 90000 SP4.5",
+        "connections": [
+          94,
+          64,
+          56,
+          25,
+          64,
+          69,
+          15
+        ],
+        "ports": [
+          3047,
+          2435,
+          1742,
+          4201,
+          3751,
+          1925,
+          4764,
+          493,
+          1760
+        ]
+      },
+      {
+        "id": 87,
+        "octets": [
+          84,
+          135,
+          10,
+          43
+        ],
+        "macAddress": [
+          150,
+          93,
+          2,
+          7,
+          1,
+          80
+        ],
+        "status": 1,
+        "latency": 284,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          84,
+          10,
+          34,
+          41
+        ],
+        "ports": [
+          4232,
+          2767,
+          2652,
+          2345,
+          1123,
+          2499,
+          2776,
+          4753,
+          2214,
+          4367
+        ]
+      },
+      {
+        "id": 88,
+        "octets": [
+          197,
+          241,
+          213,
+          208
+        ],
+        "macAddress": [
+          100,
+          165,
+          183,
+          52,
+          166,
+          178
+        ],
+        "status": 1,
+        "latency": 248,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          54,
+          95,
+          76,
+          85,
+          32,
+          16,
+          66,
+          29,
+          84
+        ],
+        "ports": [
+          41,
+          3961,
+          4577,
+          3465,
+          3324,
+          1616,
+          3236,
+          2683
+        ]
+      },
+      {
+        "id": 89,
+        "octets": [
+          11,
+          141,
+          204,
+          21
+        ],
+        "macAddress": [
+          216,
+          146,
+          63,
+          240,
+          0,
+          125
+        ],
+        "status": 1,
+        "latency": 166,
+        "deviceType": "General Purpose",
+        "os": "Raspbian 8.9",
+        "connections": [
+          65,
+          87,
+          45,
+          79,
+          81,
+          53
+        ],
+        "ports": [
+          2323,
+          352,
+          3665,
+          466,
+          2191,
+          2241,
+          761,
+          3,
+          674
+        ]
+      },
+      {
+        "id": 90,
+        "octets": [
+          16,
+          243,
+          12,
+          44
+        ],
+        "macAddress": [
+          218,
+          156,
+          143,
+          17,
+          13,
+          173
+        ],
+        "status": 1,
+        "latency": 363,
+        "deviceType": "General Purpose",
+        "os": "MacOSX - Poodle",
+        "connections": [
+          72,
+          47,
+          44,
+          63,
+          26,
+          51,
+          91,
+          91,
+          92
+        ],
+        "ports": [
+          4791,
+          2889,
+          2826,
+          1021,
+          4036,
+          1809,
+          4873,
+          806
+        ]
+      },
+      {
+        "id": 91,
+        "octets": [
+          172,
+          49,
+          212,
+          64
+        ],
+        "macAddress": [
+          75,
+          62,
+          245,
+          198,
+          56,
+          140
+        ],
+        "status": 1,
+        "latency": 224,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          51,
+          39,
+          89,
+          10,
+          16,
+          0,
+          20,
+          6,
+          70
+        ],
+        "ports": [
+          1205,
+          4345,
+          484,
+          77,
+          3751,
+          2399,
+          3916,
+          2116,
+          3303,
+          4110
+        ]
+      },
+      {
+        "id": 92,
+        "octets": [
+          116,
+          127,
+          160,
+          35
+        ],
+        "macAddress": [
+          215,
+          96,
+          138,
+          187,
+          167,
+          8
+        ],
+        "status": 1,
+        "latency": 363,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          15,
+          34
+        ],
+        "ports": [
+          2992,
+          2121,
+          2417,
+          3880,
+          796,
+          4906,
+          2400
+        ]
+      },
+      {
+        "id": 93,
+        "octets": [
+          223,
+          199,
+          235,
+          175
+        ],
+        "macAddress": [
+          235,
+          145,
+          127,
+          17,
+          120,
+          177
+        ],
+        "status": 1,
+        "latency": 309,
+        "deviceType": "General Purpose",
+        "os": "Raspbian 8.9",
+        "connections": [
+          33,
+          38,
+          44
+        ],
+        "ports": [
+          3715,
+          3851,
+          4223,
+          1545,
+          2562,
+          1071,
+          4548
+        ]
+      },
+      {
+        "id": 94,
+        "octets": [
+          169,
+          71,
+          209,
+          54
+        ],
+        "macAddress": [
+          163,
+          184,
+          241,
+          4,
+          121,
+          21
+        ],
+        "status": 1,
+        "latency": 196,
+        "deviceType": "General Purpose",
+        "os": "Ubuntu 18.04 LTS",
+        "connections": [
+          43,
+          84,
+          26,
+          77,
+          25,
+          49
+        ],
+        "ports": [
+          3951,
+          4114,
+          942,
+          74,
+          3110,
+          1954,
+          3074,
+          2934,
+          598
+        ]
+      },
+      {
+        "id": 95,
+        "octets": [
+          137,
+          106,
+          121,
+          69
+        ],
+        "macAddress": [
+          103,
+          192,
+          137,
+          162,
+          186,
+          59
+        ],
+        "status": 1,
+        "latency": 115,
+        "deviceType": "General Purpose",
+        "os": "Ubuntu 18.04 LTS",
+        "connections": [
+          85,
+          70,
+          8
+        ],
+        "ports": [
+          1909,
+          1188,
+          2809,
+          4873,
+          4759
+        ]
+      },
+      {
+        "id": 96,
+        "octets": [
+          158,
+          76,
+          190,
+          67
+        ],
+        "macAddress": [
+          147,
+          252,
+          105,
+          228,
+          239,
+          134
+        ],
+        "status": 1,
+        "latency": 479,
+        "deviceType": "General Purpose",
+        "os": "Windows 90000 SP4.5",
+        "connections": [
+          59,
+          24,
+          75,
+          44,
+          44,
+          84,
+          62,
+          53,
+          38
+        ],
+        "ports": [
+          2948,
+          2081,
+          2199,
+          141,
+          898,
+          3156,
+          2183
+        ]
+      },
+      {
+        "id": 97,
+        "octets": [
+          18,
+          83,
+          228,
+          210
+        ],
+        "macAddress": [
+          147,
+          220,
+          239,
+          224,
+          200,
+          1
+        ],
+        "status": 1,
+        "latency": 213,
+        "deviceType": "Broadband Router",
+        "os": "Cisco Default",
+        "connections": [
+          60,
+          94,
+          8,
+          88,
+          78,
+          98,
+          37
+        ],
+        "ports": [
+          4059,
+          3458,
+          1966,
+          2103,
+          2463,
+          3238,
+          3810,
+          4834,
+          4112
+        ]
+      },
+      {
+        "id": 98,
+        "octets": [
+          249,
+          133,
+          210,
+          223
+        ],
+        "macAddress": [
+          156,
+          238,
+          93,
+          78,
+          220,
+          233
+        ],
+        "status": 1,
+        "latency": 151,
+        "deviceType": "General Purpose",
+        "os": "Raspbian 8.9",
+        "connections": [
+          4,
+          62
+        ],
+        "ports": [
+          2844,
+          1442,
+          1139,
+          2701,
+          3107,
+          2219,
+          833,
+          4064,
+          4934
+        ]
+      },
+      {
+        "id": 99,
+        "octets": [
+          91,
+          151,
+          145,
+          223
+        ],
+        "macAddress": [
+          127,
+          70,
+          255,
+          207,
+          52,
+          18
+        ],
+        "status": 1,
+        "latency": 490,
+        "deviceType": "Broadband Router",
+        "os": "Linksys Default",
+        "connections": [
+          55,
+          86,
+          22,
+          0
+        ],
+        "ports": [
+          1989,
+          561,
+          4702,
+          2212,
+          2468,
+          1211
+        ]
+      }
+    ]
+}
