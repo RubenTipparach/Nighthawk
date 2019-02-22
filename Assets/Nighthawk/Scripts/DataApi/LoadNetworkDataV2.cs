@@ -53,6 +53,8 @@ public class LoadNetworkDataV2 : MonoBehaviour
                 Debug.Log(h.tMacAddress);
             }
 
+            Nodes = hdp.data;
+
             if (finishedLoadingData != null)
             {
                 finishedLoadingData(new LoadingNetworkDataArgs(hdp), this);
@@ -71,33 +73,5 @@ public class LoadNetworkDataV2 : MonoBehaviour
     public event FinishedLoadingData finishedLoadingData;
 
 
-    [Serializable]
-    public class HostDataPackage2
-    {
-        public HostNode2[] data;
-    }
-
-    // Serializable class for IP nodes.
-    [Serializable]
-    public class HostNode2
-    {
-        public int id;
-        public int[] octets;
-
-        public int[] macAddress;
-        public string tMacAddress;
-
-        public int status;
-
-        public int latency;
-        public string deviceType;
-
-        public string os;
-
-        public int[] connections;
-
-        public int[] ports;
-
-    }
 }
 

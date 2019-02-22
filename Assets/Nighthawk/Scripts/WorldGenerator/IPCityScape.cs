@@ -39,6 +39,8 @@ public class IPCityScape : MonoBehaviour
             var hexahdron = go.GetComponent<Hexahedron>();
             go.GetComponent<MeshRenderer>().material = Lvl1_Host_Mat;
 
+            l1n.AssignedGameObject = go;
+
             hexahdron.length = 1;
             hexahdron.width = 1;
 
@@ -64,6 +66,8 @@ public class IPCityScape : MonoBehaviour
             float index = 0;
             foreach (var l2n in l1n.child)
             {
+                l2n.AssignedGameObject = go;
+
                 var go2 = Instantiate(buildingPrefab.gameObject, go.transform);
                 var hexahdron2 = go2.GetComponent<Hexahedron>();
                 go2.GetComponent<MeshRenderer>().material = Lvl2_Host_Mat;

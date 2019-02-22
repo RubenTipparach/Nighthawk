@@ -26,7 +26,7 @@ public class GraphStructureV1 : MonoBehaviour
     [SerializeField]
     LineRenderer linePrefab;
 
-    private LoadNetworkDataV2.HostNode2[] nodes;
+    private HostNode2[] nodes;
 
     private void Awake()
     {
@@ -61,10 +61,12 @@ public class GraphStructureV1 : MonoBehaviour
 
             float index = 0;
 
+            l1n.AssignedGameObject = go;
+
             foreach (var l2n in l1n.connections)
             {
                 var go2 = Instantiate(linePrefab.gameObject, go.transform);
-                LoadNetworkDataV2.HostNode2 adjNode = nodes[l2n];
+                HostNode2 adjNode = nodes[l2n];
 
                 //go2.GetComponent<MeshRenderer>().material = Lvl2_Host_Mat;
                 LineRenderer lr = go2.GetComponent<LineRenderer>();

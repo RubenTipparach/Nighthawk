@@ -35,7 +35,7 @@ public class LoadNetworkData : MonoBehaviour
 
             string res = txt.text;
             HostDataPackage hdp = JsonUtility.FromJson<HostDataPackage>(res);
-        
+            Nodes = hdp.data;
             finishedLoadingData(new LoadingNetworkDataArgs(hdp), this);
         }
         else
@@ -83,7 +83,7 @@ public class LoadingNetworkDataArgs : EventArgs
 {
     public HostDataPackage HDP { get; private set; }
 
-    public LoadNetworkDataV2.HostDataPackage2 HDP2 { get; private set; }
+    public HostDataPackage2 HDP2 { get; private set; }
 
 
     public LoadingNetworkDataArgs(HostDataPackage hdp) : base()
@@ -91,23 +91,10 @@ public class LoadingNetworkDataArgs : EventArgs
         this.HDP = hdp;
     }
 
-    public LoadingNetworkDataArgs(LoadNetworkDataV2.HostDataPackage2 hdp) : base()
+    public LoadingNetworkDataArgs(HostDataPackage2 hdp) : base()
     {
         this.HDP2 = hdp;
     }
-}
-
-[Serializable]
-public class HostDataPackage
-{
-    public HostNode[] data;
-}
-
-// Serializable class for IP nodes.
-[Serializable]
-public class HostNode
-{
-    public int[] octets;
-    public HostNode[] child;
 
 }
+
