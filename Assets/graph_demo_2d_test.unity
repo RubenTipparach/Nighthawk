@@ -158,7 +158,8 @@ MonoBehaviour:
   loadNetworkDataV2: {fileID: 2118253139}
   nodePrefab: {fileID: 2104068050918957309, guid: db4fb440f3fec1749a4dea22302711f9,
     type: 3}
-  lineMat: {fileID: 2100000, guid: 89069f0fe6b97ea42b44e4ce1ddfee9c, type: 2}
+  lineMat: {fileID: 2100000, guid: dcd7776cedadebf4eb9117f54bff7a08, type: 2}
+  lineMat2: {fileID: 2100000, guid: 392956a0148e37846a1c7dc434ddc842, type: 2}
   nodeMat: {fileID: 2100000, guid: 336c8ac70fe891a48a80091a2fd4bea3, type: 2}
   textPrefab: {fileID: 5544712962785086480, guid: 3c50e9fd6d21f5a429d087bb6c6e5247,
     type: 3}

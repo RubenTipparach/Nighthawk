@@ -25,6 +25,12 @@ A VR based environment for execution of cyber attack simulations.
 ### v0.2.1
 - Tried out some metasploit stuff, looks like we got it working pretty easily, next step is to implement server-command version of eazy hack. Also a commit later tonight will update the Port information on the JSON generator.
 
+- reorganized the graph structure to better represent the data, (General Purpose/Broadband Router)
+	- Logic follows: make all GP nodes a child of BR nodes, GP should not connect to other GP
+	- Draw green for BR-BR, and orange for BR-GP, and fan out with 30 degree increments for each GP node.
+- still has some bugs, but I'm calling it a night
+![V 0.2.1](/images/v.2.1.png)
+
 # Visuals inspired by this repo.
 https://github.com/tedsluis/nmap
 https://gojs.net/latest/index.html
