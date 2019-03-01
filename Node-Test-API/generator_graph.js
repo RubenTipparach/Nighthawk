@@ -8,14 +8,15 @@ const adapter = new FileSync('db.json')
 const db = low(adapter)
 var gen = require('random-seed');
 var logger = require('./logger.js');
+var _ = require('lodash');
 
 // Set some defaults (required if your JSON file is empty)
 db.defaults({ data: []})
   .write();
 
 // ip parameters = [depth1 count, depth2 count, depth 3 count]
-const ipCount = 100;
-const seed = 42;
+const ipCount = 40;
+const seed = 4795;
 const rand = gen.create(seed);
 
 const childSpawn = [.4,.1];
@@ -46,7 +47,16 @@ const ipFound = [
 const connectionsRange = [1, 4];
 
 // concetrate all the work on ports
-const portsRange =[5, 10];
+const portsRange =[1, 5];
+
+
+let genericPort = {
+    port: 9999,
+    protocol: "TCP/UDP",
+    service: "Generic",
+    version:"1.0",
+    description: "An unimportant generic port."
+};
 
 // Based off of this article, these are ports that are most likely hacked by systems.
 // https://www.dummies.com/programming/networking/commonly-hacked-ports/
@@ -106,7 +116,7 @@ const portsDataBase = [
     service: "POP3",
     version: "3.0",
     description: "Post Office Protocol version 3"
-},
+}
 ]
 
 // Windows exclusive servers.
@@ -152,7 +162,7 @@ const windowsExclusivePorts = [
         service: "MSSQL",
         version: "11.0",
         description: "Microsoft SQL Server 2012"
-    },
+    }
 ];
 
 generateIPAddresses();
@@ -163,6 +173,7 @@ function generateIPAddresses(){
 
     let hosts = [];
 
+    // Initialization of the connections.
     for (let i = 0; i < ipCount; i++)
     {
         // let concatIp = `${ipAddOct1_Lvl1}.${ipAddOct2_Lvl1}.${ipAddOct3}.${ipAddOct4}`;
@@ -182,31 +193,100 @@ function generateIPAddresses(){
 
 
         // host.child = [];
-        let numOfconnections = rand.intBetween(connectionsRange[0], connectionsRange[1]);
-        let numOfports = rand.intBetween(portsRange[0], portsRange[1]);
         host.connections = [];
 
         // some random ports, some exploitable ports.
         host.ports = [];
 
         // creates an undirected graph of stuff.
-        for (let j = 0; j < numOfconnections; j++)
-        {
-            host.connections.push(rand(ipCount));
-        }
+        // needs to check target connection
+        // for (let j = 0; j < numOfconnections; j++)
+        // {
+        //     host.connections.push(rand(ipCount));
+        // }
 
-        for (let k = 0; k < numOfports; k++)
-        {
-            host.ports.push(rand.intBetween(1, 5000));
-        }
 
         hosts.push(host);
     }
 
+    // Post processing connections
+    for (const host of hosts) {
+        let numOfconnections = rand.intBetween(connectionsRange[0], connectionsRange[1]);
+        let numOfports = rand.intBetween(portsRange[0], portsRange[1]);
+        let numOfSpecific = rand.intBetween(portsRange[0], portsRange[1]);
+        
 
+        for (let j = 0; j < numOfconnections; j++)
+        {
+            // trying to give the system some variance
+            if(host.osTypes === "General Purpose")
+            {
+                const ranHost = rand(ipCount);
+                let connectedHost = hosts[ranHost];
+
+                if(connectedHost.deviceType !== "General Purpose")
+                {
+                    host.connections.push(ranHost);
+                }
+            }
+            else{
+                host.connections.push(rand(ipCount));
+            }
+        }
+
+        // also generate windows ports too!
+        if(host.os.includes("Windows"))
+        {
+            let numOfWindows = rand.intBetween(portsRange[0], portsRange[1]);
+
+            // create port data.
+            choosePort(numOfports, host, [], false);
+            logger.info("windows");
+            
+            choosePort(numOfSpecific, host, portsDataBase);
+            choosePort(numOfWindows, host, windowsExclusivePorts);
+        }
+        else if(host.deviceType === "General Purpose"){
+            // create port data.
+            logger.info("linux");
+
+            choosePort(numOfports, host, [], false);
+            choosePort(numOfSpecific, host, portsDataBase);
+        }
+
+    }
+
+    //logger.debug(hosts);
+
+    hosts = _.remove(hosts, h =>{  return h.connections.length >= 0});
 
     db.set('data', hosts)
        .write();
        
     logger.debug(hosts);
+}
+
+// create ports.
+function choosePort(randNum, host, portDB, vulnerable = true)
+{
+    if(vulnerable)
+    {
+        for (let k = 0; k < randNum; k++)
+        {
+            logger.info("copying from port");
+
+            let rp = rand(portDB.length ); 
+            let port = Object.assign({},  portDB[rp]);
+            host.ports.push(port);
+        }
+    }
+    else
+    {
+        for (let k = 0; k < randNum; k++)
+        {
+            let p =Object.assign({}, genericPort);;
+            p.port = rand.intBetween(3000, 5000);
+            host.ports.push(p);
+        }
+    }
 }
