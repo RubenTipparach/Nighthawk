@@ -44,7 +44,116 @@ const ipFound = [
     }
 ];
 const connectionsRange = [1, 4];
+
+// concetrate all the work on ports
 const portsRange =[5, 10];
+
+// Based off of this article, these are ports that are most likely hacked by systems.
+// https://www.dummies.com/programming/networking/commonly-hacked-ports/
+const portsDataBase = [
+{
+    port: 21,
+    protocol: "TCP",
+    service: "FTP",
+    version:"1.0",
+    description: "File Transfer Protocol"
+},
+{
+    port: 22,
+    protocol: "TCP",
+    service: "SSH",
+    version: "1.0",
+    description: "Secure Shell"
+},
+{
+    port: 23,
+    protocol: "TCP",
+    service: "Telnet",
+    version: "1.0",
+    description: ""
+},
+{
+    port: 25,
+    protocol: "TCP",
+    service: "SMTP",
+    version: "1.0",
+    description: "Simple Mail Transfer Protocol"
+},
+{
+    port: 53,
+    protocol: "TCP/UDP",
+    service: "DNS",
+    version: "1.0",
+    description: "Domain Name System"
+},
+{
+    port: 80,
+    protocol: "TCP",
+    service: "HTTP",
+    version: "1.0",
+    description: "Hyper Text Transfer Protocol"
+},
+{
+    port: 443,
+    protocol: "TCP",
+    service: "HTTPS",
+    version: "1.0",
+    description: "HTTP over SSL"
+},
+{
+    port: 110,
+    protocol: "TCP",
+    service: "POP3",
+    version: "3.0",
+    description: "Post Office Protocol version 3"
+},
+]
+
+// Windows exclusive servers.
+const windowsExclusivePorts = [
+    {
+        port: 135,
+        protocol: "TCP/UDP",
+        service: "RPC",
+        version: "8.0",
+        description: "Windows RPC"
+    },
+    {
+        port: 137,
+        protocol: "TCP/UDP",
+        service: "NetBIOS",
+        version: "1.0",
+        description: "Windows NetBIOS over TCP/IP"
+    },
+    {
+        port: 138,
+        protocol: "TCP/UDP",
+        service: "NetBIOS",
+        version: "1.0",
+        description: "Windows NetBIOS over TCP/IP"
+    },
+    {
+        port: 139,
+        protocol: "TCP/UDP",
+        service: "NetBIOS",
+        version: "1.0",
+        description: "Windows NetBIOS over TCP/IP"
+    },
+    {
+        port: 1433,
+        protocol: "TCP",
+        service: "MSSQL",
+        version: "11.0",
+        description: "Microsoft SQL Server 2012"
+    },
+    {
+        port: 1434,
+        protocol: "UDP",
+        service: "MSSQL",
+        version: "11.0",
+        description: "Microsoft SQL Server 2012"
+    },
+];
 
 generateIPAddresses();
 
@@ -56,7 +165,7 @@ function generateIPAddresses(){
 
     for (let i = 0; i < ipCount; i++)
     {
-        //let concatIp = `${ipAddOct1_Lvl1}.${ipAddOct2_Lvl1}.${ipAddOct3}.${ipAddOct4}`;
+        // let concatIp = `${ipAddOct1_Lvl1}.${ipAddOct2_Lvl1}.${ipAddOct3}.${ipAddOct4}`;
         let host = {id: i, octets: [rand(256), rand(256), rand(256), rand(256)]};
         host.macAddress = [rand(256), rand(256), rand(256), rand(256), rand(256), rand(256)];
 
@@ -76,6 +185,8 @@ function generateIPAddresses(){
         let numOfconnections = rand.intBetween(connectionsRange[0], connectionsRange[1]);
         let numOfports = rand.intBetween(portsRange[0], portsRange[1]);
         host.connections = [];
+
+        // some random ports, some exploitable ports.
         host.ports = [];
 
         // creates an undirected graph of stuff.
