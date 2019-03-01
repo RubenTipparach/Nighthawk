@@ -14,11 +14,16 @@ A VR based environment for execution of cyber attack simulations.
 
 ## Version progression
 
-- v0.1 envision the universe as buildings
+### v0.1
+- envision the universe as buildings
 ![v 0.1](/images/v.1.png)
 
-- v0.2 traditional graph rendering. Might have assigned too many connections, and added redundant ones too. Will need clean up for more usability.
+### v0.2
+-  traditional graph rendering. Might have assigned too many connections, and added redundant ones too. Will need clean up for more usability.
 ![v 0.2](/images/v.2.png)
+
+### v0.2.1
+- Tried out some metasploit stuff, looks like we got it working pretty easily, next step is to implement server-command version of eazy hack. Also a commit later tonight will update the Port information on the JSON generator.
 
 # Visuals inspired by this repo.
 https://github.com/tedsluis/nmap
