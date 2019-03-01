@@ -29,7 +29,9 @@ A VR based environment for execution of cyber attack simulations.
 	- Logic follows: make all GP nodes a child of BR nodes, GP should not connect to other GP
 	- Draw green for BR-BR, and orange for BR-GP, and fan out with 30 degree increments for each GP node.
 - still has some bugs, but I'm calling it a night
+
 ![V 0.2.1](/images/v.2.1.png)
+- special note: I think I know why this is happening, routers are sharing GPs. I'll have to copy some to make up for that, should be good.
 
 # Visuals inspired by this repo.
 https://github.com/tedsluis/nmap
