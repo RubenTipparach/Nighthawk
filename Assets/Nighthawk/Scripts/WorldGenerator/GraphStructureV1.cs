@@ -73,6 +73,7 @@ public class GraphStructureV1 : MonoBehaviour
             }
         }
 
+        // places router stuff first!
         foreach (var l1n in nodes)
         {
             var go = Instantiate(nodePrefab.gameObject, transform);
@@ -81,7 +82,7 @@ public class GraphStructureV1 : MonoBehaviour
             octahedron.radius = 1;
 
             //what to do with octet 0?
-            var nodePosition = getLocationFromOctet(l1n.octets);
+            var nodePosition = getLocationFromOctet(l1n.octets) * 2;
             go.transform.localPosition = nodePosition;
 
             // set text position
@@ -102,6 +103,7 @@ public class GraphStructureV1 : MonoBehaviour
             float index = 0;
             var nodePosition = l1n.AssignedGameObject.transform.position;
 
+
             // All l2n should be GP now.
             foreach (var l2n in l1n.connections)
             {
@@ -110,6 +112,11 @@ public class GraphStructureV1 : MonoBehaviour
 
                 //go2.GetComponent<MeshRenderer>().material = Lvl2_Host_Mat;
                 LineRenderer lr = go2.GetComponent<LineRenderer>();
+
+                // added node tracker to maintain the position of the nodes.
+                NodeTracker nt = go2.AddComponent<NodeTracker>();
+                nt.HostNode = l1n.AssignedGameObject;
+                nt.ConnectionNode = nodes[l2n].AssignedGameObject;
 
                 if (adjNode.deviceType == BROADBAND_ROUTER && l1n.deviceType == BROADBAND_ROUTER)
                 {
@@ -125,6 +132,8 @@ public class GraphStructureV1 : MonoBehaviour
                     var adjNodePosition = nodePosition + Quaternion.Euler(0, 0, 30 * index) * angleAxis * 20 ;
                     adjNode.AssignedGameObject.transform.position = adjNodePosition;
                     lr.SetPositions(new Vector3[] { nodePosition, adjNodePosition });
+                    
+
                 }
                 else
                 {

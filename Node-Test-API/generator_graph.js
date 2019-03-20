@@ -15,7 +15,7 @@ db.defaults({ data: []})
   .write();
 
 // ip parameters = [depth1 count, depth2 count, depth 3 count]
-const ipCount = 40;
+const ipCount = 400;
 const seed = 4795;
 const rand = gen.create(seed);
 
@@ -44,7 +44,7 @@ const ipFound = [
         ports: [20,11,80,225,3001]
     }
 ];
-const connectionsRange = [1, 4];
+const connectionsRange = [1, 3];
 
 // concetrate all the work on ports
 const portsRange =[1, 5];
@@ -172,20 +172,27 @@ generateIPAddresses();
 function generateIPAddresses(){
 
     let hosts = [];
-
+    let routers = [];
+    // -------------------------------------------------------------------------------
     // Initialization of the connections.
+    // -------------------------------------------------------------------------------
     for (let i = 0; i < ipCount; i++)
     {
         // let concatIp = `${ipAddOct1_Lvl1}.${ipAddOct2_Lvl1}.${ipAddOct3}.${ipAddOct4}`;
         let host = {id: i, octets: [rand(256), rand(256), rand(256), rand(256)]};
         host.macAddress = [rand(256), rand(256), rand(256), rand(256), rand(256), rand(256)];
-
+        host.ipAdress = host.octets.join('.');
         host.status = 1;
         host.latency = rand.intBetween(100, 500);
-        host.deviceType = deviceType[rand(deviceType.length)];
+
+        // Only two device types right now.
+        let chance = rand(1000) >= 100; // 10% chance to be a broad band
+
+        host.deviceType = deviceType[chance ? 1 : 0];
 
         if (host.deviceType  == "Broadband Router") {
             host.os = routerOs[rand(routerOs.length)];
+            routers.push(i);
         }
         else {
             host.os = osTypes[rand(osTypes.length)];
@@ -209,29 +216,27 @@ function generateIPAddresses(){
         hosts.push(host);
     }
 
+    console.log(routers);
+    // ----------------1---------------------------------------------------------------
     // Post processing connections
+    // -------------------------------------------------------------------------------
     for (const host of hosts) {
         let numOfconnections = rand.intBetween(connectionsRange[0], connectionsRange[1]);
         let numOfports = rand.intBetween(portsRange[0], portsRange[1]);
         let numOfSpecific = rand.intBetween(portsRange[0], portsRange[1]);
         
+        if(host.deviceType === "General Purpose")
+        {
+            numOfconnections = 1;
+        }
 
         for (let j = 0; j < numOfconnections; j++)
         {
-            // trying to give the system some variance
-            if(host.osTypes === "General Purpose")
-            {
-                const ranHost = rand(ipCount);
-                let connectedHost = hosts[ranHost];
-
-                if(connectedHost.deviceType !== "General Purpose")
-                {
-                    host.connections.push(ranHost);
-                }
-            }
-            else{
-                host.connections.push(rand(ipCount));
-            }
+            
+            // Limiting the number of connections to PCs to just 1 router for simplification,
+            // routers get interlinked in the network.
+            var randRouterId = rand(routers.length);
+            host.connections.push(routers[randRouterId]);
         }
 
         // also generate windows ports too!
