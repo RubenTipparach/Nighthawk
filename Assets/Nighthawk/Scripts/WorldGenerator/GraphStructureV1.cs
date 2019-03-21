@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class GraphStructureV1 : MonoBehaviour
 {
+    public Camera playerCamera;
 
     [SerializeField]
     LoadNetworkDataV2 loadNetworkDataV2;
@@ -91,6 +92,10 @@ public class GraphStructureV1 : MonoBehaviour
 
             var tmp = textObj.GetComponent<TextMeshPro>();
             tmp.SetText($" {l1n.deviceType} |  {l1n.octets[0]}.{l1n.octets[1]}.{l1n.octets[2]}.{l1n.octets[3]}");
+
+            // set to follow the camera's movement
+            var script = textObj.GetComponent<FaceCamera>();
+            script.cameraToLookAt = playerCamera;
 
 
             l1n.AssignedGameObject = go;
