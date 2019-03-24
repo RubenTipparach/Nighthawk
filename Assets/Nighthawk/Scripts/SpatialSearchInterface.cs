@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class SpatialSearchInterface : MonoBehaviour
 {
-    [SerializeField] int oc1 = -1;
+    [SerializeField] public int oc1 = -1;
 
-    [SerializeField] int oc2 = -1;
+    [SerializeField] public int oc2 = -1;
 
-    [SerializeField] int oc3 = -1;
+    [SerializeField] public int oc3 = -1;
 
-    [SerializeField] int oc4 = -1;
+    [SerializeField] public int oc4 = -1;
 
 
     public bool triggerUpdate = false;
