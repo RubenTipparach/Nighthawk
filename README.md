@@ -33,6 +33,24 @@ A VR based environment for execution of cyber attack simulations.
 ![V 0.2.1](/images/v.2.1.png)
 - special note: I think I know why this is happening, routers are sharing GPs. I'll have to copy some to make up for that, should be good.
 
+### v0.3
+- got the search toolbox to work
+- UI system was integrated into graph visualization pretty well
+- reorganized the data a little
+- using Seeded-Random unit sphere surphace for now, will figure out a good formation later
+- sorted nodes by type in hirearchy
+- all nodes and lines update on the fly
+
+![awesome animation](/images/awesome_animation_1.gif)
+
+- this is a test animation of the central connection nodes in motion
+- leaf nodes follow their parent, and point away from the center for readability.
+
+![crude drawing](crude_drawing_of_results.png)
+- while searching, results become eliminated, and filtered results will reorganize themselves in front of you
+- this sketch is based on an idea I had at work...
+
+
 # Visuals inspired by this repo.
 https://github.com/tedsluis/nmap
 https://gojs.net/latest/index.html

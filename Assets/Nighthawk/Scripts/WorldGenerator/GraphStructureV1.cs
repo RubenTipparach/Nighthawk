@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GraphStructureV1 : MonoBehaviour
 {
@@ -33,17 +34,33 @@ public class GraphStructureV1 : MonoBehaviour
 
     private HostNode2[] nodes;
 
+    public int seed = 42;
+
+    [SerializeField]
+    Transform Routers;
+
+    [SerializeField]
+    Transform PCs;
+
+
     private void Awake()
     {
         loadNetworkDataV2.finishedLoadingData += LoadedNetworkData_finishedLoadingData;
+
     }
 
+    // Generates routers in a cluster
     private Vector3 getLocationFromOctet(int[] octets)
     {
         return new Vector3((float)octets[2] / 2f - 128f, (float)octets[1] / 2f, (float)octets[3] / 2f - 128f);
     }
 
-    public readonly Vector3 centerGrid = new Vector3(0, 0, 0);
+    private Vector3 getFromRandomSphere()
+    {
+        return Random.onUnitSphere* 64;
+    }
+
+    public static readonly Vector3 CenterGrid = new Vector3(0, 0, 0);
 
     public const string BROADBAND_ROUTER = "Broadband Router";
     public const string GENERAL_PURPOSE = "General Purpose";
@@ -74,16 +91,33 @@ public class GraphStructureV1 : MonoBehaviour
             }
         }
 
-        // places router stuff first!
+        Random.InitState(42);
+
+        // places router stuff first!// it also places all nodes in some default position.
         foreach (var l1n in nodes)
         {
-            var go = Instantiate(nodePrefab.gameObject, transform);
+            //string name;
+
+            var go = Instantiate(nodePrefab.gameObject);
+
+            if (l1n.deviceType == GENERAL_PURPOSE)
+            {
+                go.transform.SetParent( PCs);
+                go.AddComponent<PCNodeTracker>();
+            }
+            if (l1n.deviceType == BROADBAND_ROUTER)
+            {
+                go.transform.SetParent(Routers);
+            }
+
+            
             var octahedron = go.GetComponent<Octahedron>();
             go.GetComponent<MeshRenderer>().material = nodeMat;
             octahedron.radius = 1;
 
             //what to do with octet 0?
-            var nodePosition = getLocationFromOctet(l1n.octets) * 2;
+            //var nodePosition = getLocationFromOctet(l1n.octets) * 2;
+            var nodePosition = getFromRandomSphere();
             go.transform.localPosition = nodePosition;
 
             // set text position
@@ -103,10 +137,14 @@ public class GraphStructureV1 : MonoBehaviour
         }
 
         // finally create all the connections
+        //return;
         foreach (var l1n in nodes)
         {
-            float index = 0;
+            int index = 0;
             var nodePosition = l1n.AssignedGameObject.transform.position;
+
+            // skip generals
+            //if (l1n.deviceType == GENERAL_PURPOSE) continue;
 
 
             // All l2n should be GP now.
@@ -131,19 +169,21 @@ public class GraphStructureV1 : MonoBehaviour
                 if (adjNode.deviceType == GENERAL_PURPOSE && l1n.deviceType == BROADBAND_ROUTER)
                 {
                     // change 4 to some arbitrary value.
-                    var angleAxis = (nodePosition - centerGrid).normalized;
-                   
+                    //var angleAxis = (nodePosition - centerGrid).normalized;
+                    //var adjNodePosition = nodePosition + Quaternion.Euler(0, 0, 30 * index) * angleAxis * 20 ;
+                    //adjNode.AssignedGameObject.transform.position = adjNodePosition;
+                    //lr.SetPositions(new Vector3[] { nodePosition, adjNodePosition });
 
-                    var adjNodePosition = nodePosition + Quaternion.Euler(0, 0, 30 * index) * angleAxis * 20 ;
-                    adjNode.AssignedGameObject.transform.position = adjNodePosition;
-                    lr.SetPositions(new Vector3[] { nodePosition, adjNodePosition });
-                    
+                    // Since I'm a PC node, I'm going to have this system override stuff.
+                    var pcnt = adjNode.AssignedGameObject.GetComponent<PCNodeTracker>();
+                    pcnt.HostNode = l1n;
+                    pcnt.index = index;
 
                 }
                 else
                 {
-                    var adjNodePosition = getLocationFromOctet(adjNode.octets);
-                    lr.SetPositions(new Vector3[] { nodePosition, adjNodePosition });
+                    //var adjNodePosition = getLocationFromOctet(adjNode.octets);
+                    //lr.SetPositions(new Vector3[] { nodePosition, adjNodePosition });
                 }
 
                 index++;
