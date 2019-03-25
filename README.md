@@ -46,7 +46,7 @@ A VR based environment for execution of cyber attack simulations.
 - this is a test animation of the central connection nodes in motion
 - leaf nodes follow their parent, and point away from the center for readability.
 
-![crude drawing](crude_drawing_of_results.png)
+![crude drawing](/images/crude_drawing_of_results.png)
 - while searching, results become eliminated, and filtered results will reorganize themselves in front of you
 - this sketch is based on an idea I had at work...
 
