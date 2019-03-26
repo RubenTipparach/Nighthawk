@@ -18,6 +18,9 @@ public class SpatialSearchInterface : MonoBehaviour
     [SerializeField] LoadNetworkData loadNetworkData;
     [SerializeField] LoadNetworkDataV2 loadNetworkDataV2;
 
+    //sou[SerializeField] FilterSearchMode filterMode;
+
+
     public void ClearSearch(){
        // -1 values are all wild cards.
         oc1 = -1; oc2 = -1; oc3 = -1; oc4 = -1;
@@ -45,9 +48,17 @@ public class SpatialSearchInterface : MonoBehaviour
             int[] searchArray = new int[] { oc1, oc2, oc3, oc4 };
             foreach (var h in hngo)
             {
-                
+
+                var pcNode = h.AssignedGameObject.GetComponent<PCNodeTracker>();
+
+                if (pcNode == null)
+                {
+                    continue;
+                }
+
                 for (int i = 0; i < 4; i++)
                 {
+                // switch search/filter modes.
                     if (searchArray[i] != -1)
                     {
                         if(h.OctetInterface[i] != searchArray[i]){
