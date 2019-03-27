@@ -17,6 +17,8 @@ public class RouterNodeTracker : MonoBehaviour
     Vector3 GoToPosition;
     Vector3 velocity;
 
+    public Vector3 InitPos { get; private set; }
+
     public bool UpdatePosition { get; private set; }
 
     public float updateSpeed = 1000f;
@@ -31,7 +33,7 @@ public class RouterNodeTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        InitPos = transform.position;
     }
 
     // Update is called once per frame
@@ -41,6 +43,11 @@ public class RouterNodeTracker : MonoBehaviour
         {
             //transform.position = Vector3.SmoothDamp(transform.position, GoToPosition, ref velocity, updateSpeed * Time.deltaTime );
             transform.position = Vector3.Slerp(transform.position, GoToPosition, 10 * Time.deltaTime);
+
+            if(Vector3.Distance(transform.position, GoToPosition ) < 0.1f)
+            {
+                UpdatePosition = false;
+            }
         }
     }
 }
