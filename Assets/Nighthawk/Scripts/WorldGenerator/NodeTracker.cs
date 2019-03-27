@@ -9,6 +9,9 @@ public class NodeTracker : MonoBehaviour
 
     LineRenderer lr;
 
+    // if this is a child of something, it will have an index.
+    public int childIdnex = -1;
+
     private void Start()
     {
         lr = GetComponent<LineRenderer>();

@@ -49,8 +49,8 @@ public class LoadNetworkDataV2 : MonoBehaviour
             {
                 byte[] bs = h.macAddress.Select(p => { byte b; byte.TryParse(p +"", out b); return b; }).ToArray();
                 h.tMacAddress = ByteArrayToString(bs);
-                Debug.Log($"{h.octets[0]}.{h.octets[1]}.{h.octets[2]}.{h.octets[3]}");
-                Debug.Log(h.tMacAddress);
+                //Debug.Log($"{h.octets[0]}.{h.octets[1]}.{h.octets[2]}.{h.octets[3]}");
+                //Debug.Log(h.tMacAddress);
             }
 
             Nodes = hdp.data;

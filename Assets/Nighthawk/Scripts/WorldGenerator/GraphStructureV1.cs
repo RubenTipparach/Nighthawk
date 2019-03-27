@@ -24,6 +24,9 @@ public class GraphStructureV1 : MonoBehaviour
     Material lineMat2;
 
     [SerializeField]
+    Material searchLineMat;
+
+    [SerializeField]
     Material nodeMat;
 
     [SerializeField]
@@ -42,11 +45,13 @@ public class GraphStructureV1 : MonoBehaviour
     [SerializeField]
     Transform PCs;
 
+    [SerializeField]
+    public Transform CenterTransform;
 
     private void Awake()
     {
         loadNetworkDataV2.finishedLoadingData += LoadedNetworkData_finishedLoadingData;
-
+        sCenterTransform = CenterTransform;
     }
 
     // Generates routers in a cluster
@@ -55,12 +60,19 @@ public class GraphStructureV1 : MonoBehaviour
         return new Vector3((float)octets[2] / 2f - 128f, (float)octets[1] / 2f, (float)octets[3] / 2f - 128f);
     }
 
+    public float RouterDistanceVal = 64;
+
     private Vector3 getFromRandomSphere()
     {
         return Random.onUnitSphere* 64;
     }
 
-    public static readonly Vector3 CenterGrid = new Vector3(0, 0, 0);
+    static Transform sCenterTransform;
+
+    public static Vector3 CenterGrid
+    {
+        get { return sCenterTransform.position; }
+    }
 
     public const string BROADBAND_ROUTER = "Broadband Router";
     public const string GENERAL_PURPOSE = "General Purpose";
@@ -142,6 +154,14 @@ public class GraphStructureV1 : MonoBehaviour
         {
             int index = 0;
             var nodePosition = l1n.AssignedGameObject.transform.position;
+            var rtNode = l1n.AssignedGameObject.AddComponent<RouterNodeTracker>();
+
+            LineRenderer hiddenLr = l1n.AssignedGameObject.AddComponent<LineRenderer>();
+            hiddenLr.enabled = false;
+            hiddenLr.sharedMaterial = searchLineMat;
+            NodeTracker hiddenNt = l1n.AssignedGameObject.AddComponent<NodeTracker>();
+            hiddenNt.HostNode = l1n.AssignedGameObject;
+            hiddenNt.ConnectionNode = CenterTransform.gameObject; // TODO: update this to whatever you want to pivot on search.
 
             // skip generals
             //if (l1n.deviceType == GENERAL_PURPOSE) continue;
@@ -161,30 +181,24 @@ public class GraphStructureV1 : MonoBehaviour
                 nt.HostNode = l1n.AssignedGameObject;
                 nt.ConnectionNode = nodes[l2n].AssignedGameObject;
 
+                // both are broadband types
                 if (adjNode.deviceType == BROADBAND_ROUTER && l1n.deviceType == BROADBAND_ROUTER)
                 {
                     lr.sharedMaterial = lineMat2;
+                    rtNode.connectionLines.Add(nt);
                 }
-
+                
+                // a pc node is adjacent, assign it as child.
                 if (adjNode.deviceType == GENERAL_PURPOSE && l1n.deviceType == BROADBAND_ROUTER)
                 {
-                    // change 4 to some arbitrary value.
-                    //var angleAxis = (nodePosition - centerGrid).normalized;
-                    //var adjNodePosition = nodePosition + Quaternion.Euler(0, 0, 30 * index) * angleAxis * 20 ;
-                    //adjNode.AssignedGameObject.transform.position = adjNodePosition;
-                    //lr.SetPositions(new Vector3[] { nodePosition, adjNodePosition });
-
                     // Since I'm a PC node, I'm going to have this system override stuff.
                     var pcnt = adjNode.AssignedGameObject.GetComponent<PCNodeTracker>();
                     pcnt.HostNode = l1n;
+                    rtNode.childrenNodes.Add(adjNode);
                     pcnt.index = index;
-
-                }
-                else
-                {
-                    //var adjNodePosition = getLocationFromOctet(adjNode.octets);
-                    //lr.SetPositions(new Vector3[] { nodePosition, adjNodePosition });
-                }
+                    nt.childIdnex = index;
+                    rtNode.childrenLines.Add(nt);
+                }                
 
                 index++;
             }
