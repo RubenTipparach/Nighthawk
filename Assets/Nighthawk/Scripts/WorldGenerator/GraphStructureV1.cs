@@ -154,53 +154,56 @@ public class GraphStructureV1 : MonoBehaviour
         {
             int index = 0;
             var nodePosition = l1n.AssignedGameObject.transform.position;
-            var rtNode = l1n.AssignedGameObject.AddComponent<RouterNodeTracker>();
 
-            LineRenderer hiddenLr = l1n.AssignedGameObject.AddComponent<LineRenderer>();
-            hiddenLr.enabled = false;
-            hiddenLr.sharedMaterial = searchLineMat;
-            NodeTracker hiddenNt = l1n.AssignedGameObject.AddComponent<NodeTracker>();
-            hiddenNt.HostNode = l1n.AssignedGameObject;
-            hiddenNt.ConnectionNode = CenterTransform.gameObject; // TODO: update this to whatever you want to pivot on search.
-
-            // skip generals
-            //if (l1n.deviceType == GENERAL_PURPOSE) continue;
-
-
-            // All l2n should be GP now.
-            foreach (var l2n in l1n.connections)
+            if (l1n.connections.Length > 0)
             {
-                var go2 = Instantiate(linePrefab.gameObject, l1n.AssignedGameObject.transform);
-                HostNode2 adjNode = nodes[l2n];
+                var rtNode = l1n.AssignedGameObject.AddComponent<RouterNodeTracker>();
+                LineRenderer hiddenLr = l1n.AssignedGameObject.AddComponent<LineRenderer>();
+                hiddenLr.enabled = false;
+                hiddenLr.sharedMaterial = searchLineMat;
+                NodeTracker hiddenNt = l1n.AssignedGameObject.AddComponent<NodeTracker>();
+                hiddenNt.HostNode = l1n.AssignedGameObject;
+                hiddenNt.ConnectionNode = CenterTransform.gameObject; // TODO: update this to whatever you want to pivot on search.
 
-                //go2.GetComponent<MeshRenderer>().material = Lvl2_Host_Mat;
-                LineRenderer lr = go2.GetComponent<LineRenderer>();
+                // skip generals
+                //if (l1n.deviceType == GENERAL_PURPOSE) continue;
 
-                // added node tracker to maintain the position of the nodes.
-                NodeTracker nt = go2.AddComponent<NodeTracker>();
-                nt.HostNode = l1n.AssignedGameObject;
-                nt.ConnectionNode = nodes[l2n].AssignedGameObject;
 
-                // both are broadband types
-                if (adjNode.deviceType == BROADBAND_ROUTER && l1n.deviceType == BROADBAND_ROUTER)
+                // All l2n should be GP now.
+                foreach (var l2n in l1n.connections)
                 {
-                    lr.sharedMaterial = lineMat2;
-                    rtNode.connectionLines.Add(nt);
+                    var go2 = Instantiate(linePrefab.gameObject, l1n.AssignedGameObject.transform);
+                    HostNode2 adjNode = nodes[l2n];
+
+                    //go2.GetComponent<MeshRenderer>().material = Lvl2_Host_Mat;
+                    LineRenderer lr = go2.GetComponent<LineRenderer>();
+
+                    // added node tracker to maintain the position of the nodes.
+                    NodeTracker nt = go2.AddComponent<NodeTracker>();
+                    nt.HostNode = l1n.AssignedGameObject;
+                    nt.ConnectionNode = nodes[l2n].AssignedGameObject;
+
+                    // both are broadband types
+                    if (adjNode.deviceType == BROADBAND_ROUTER && l1n.deviceType == BROADBAND_ROUTER)
+                    {
+                        lr.sharedMaterial = lineMat2;
+                        rtNode.connectionLines.Add(nt);
+                    }
+
+                    // a pc node is adjacent, assign it as child.
+                    if (adjNode.deviceType == GENERAL_PURPOSE && l1n.deviceType == BROADBAND_ROUTER)
+                    {
+                        // Since I'm a PC node, I'm going to have this system override stuff.
+                        var pcnt = adjNode.AssignedGameObject.GetComponent<PCNodeTracker>();
+                        pcnt.HostNode = l1n;
+                        rtNode.childrenNodes.Add(adjNode);
+                        pcnt.index = index;
+                        nt.childIdnex = index;
+                        rtNode.childrenLines.Add(nt);
+                    }
+
+                    index++;
                 }
-                
-                // a pc node is adjacent, assign it as child.
-                if (adjNode.deviceType == GENERAL_PURPOSE && l1n.deviceType == BROADBAND_ROUTER)
-                {
-                    // Since I'm a PC node, I'm going to have this system override stuff.
-                    var pcnt = adjNode.AssignedGameObject.GetComponent<PCNodeTracker>();
-                    pcnt.HostNode = l1n;
-                    rtNode.childrenNodes.Add(adjNode);
-                    pcnt.index = index;
-                    nt.childIdnex = index;
-                    rtNode.childrenLines.Add(nt);
-                }                
-
-                index++;
             }
         }
     }

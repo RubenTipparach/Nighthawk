@@ -14,6 +14,11 @@ A VR based environment for execution of cyber attack simulations.
 
 ## Version progression
 
+### v0.4
+- Added in animations for search transitions. 
+- Also restructured graph and search system to make system more robust and queryable.
+- Objects now have really detailed data on their relationships with other data.
+![awesome animation 2](/images/awesome_animation_2.gif)
 
 ### v0.3
 - got the search toolbox to work

@@ -42,7 +42,7 @@ public class RouterNodeTracker : MonoBehaviour
         if (UpdatePosition)
         {
             //transform.position = Vector3.SmoothDamp(transform.position, GoToPosition, ref velocity, updateSpeed * Time.deltaTime );
-            transform.position = Vector3.Slerp(transform.position, GoToPosition, 10 * Time.deltaTime);
+            transform.position = Vector3.Slerp(transform.position, GoToPosition, 5 * Time.deltaTime);
 
             if(Vector3.Distance(transform.position, GoToPosition ) < 0.1f)
             {

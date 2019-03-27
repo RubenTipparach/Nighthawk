@@ -35,7 +35,56 @@ public class SpatialSearchInterface : MonoBehaviour
        // -1 values are all wild cards.
         oc1 = -1; oc2 = -1; oc3 = -1; oc4 = -1;
 
-        UpdateNetworkRender();
+        ResetAllNodes();
+    }
+
+    void ResetAllNodes()
+    {
+        int[] searchArray = new int[] { oc1, oc2, oc3, oc4 };
+        bool searched = false;
+        //trackingRouters;
+        for (int i = 0; i < 4; i++)
+        {
+            // switch search/filter modes.
+            if (searchArray[i] != -1)
+            {
+                searched = true;
+            }
+        }
+
+        // reset everything to default!
+        if (!searched)
+        {
+            var hngo = loadNetworkDataV2.Nodes;
+            var rtNodes = hngo.Where(p => p.deviceType == GraphStructureV1.BROADBAND_ROUTER);
+
+            foreach (var r in rtNodes)
+            {
+                r.AssignedGameObject.SetActive(true);
+                RouterNodeTracker rnt = r.AssignedGameObject.GetComponent<RouterNodeTracker>();
+                rnt.gameObject.GetComponent<LineRenderer>().enabled = false;
+                rnt.SetNewPosiiton(rnt.InitPos);
+                foreach (var p in rnt.childrenLines)
+                {
+                    p.gameObject.SetActive(true);
+                }
+                foreach (var p in rnt.connectionLines)
+                {
+                    p.gameObject.SetActive(true);
+                }
+            }
+
+            var pcNodes = hngo.Where(p => p.deviceType == GraphStructureV1.GENERAL_PURPOSE);
+            foreach (var h in pcNodes)
+            {
+                h.AssignedGameObject.SetActive(true);
+            }
+        }
+        else
+        {
+            //begin the search!
+            UpdateNetworkRender();
+        }
     }
 
     public void UpdateNetworkRender()
@@ -81,52 +130,6 @@ public class SpatialSearchInterface : MonoBehaviour
         }
     }
 
-    void ResetAllNodes()
-    {
-        int[] searchArray = new int[] { oc1, oc2, oc3, oc4 };
-        bool searched = false;
-        //trackingRouters;
-        for (int i = 0; i < 4; i++)
-        {
-            // switch search/filter modes.
-            if (searchArray[i] != -1)
-            {
-                searched = true;
-            }
-        }
-
-        if (!searched)
-        {
-            var hngo = loadNetworkDataV2.Nodes;
-            var rtNodes = hngo.Where(p => p.deviceType == GraphStructureV1.BROADBAND_ROUTER);
-            //disable all uneeded nodes.
-            foreach (var r in rtNodes)
-            {
-                r.AssignedGameObject.SetActive(true);
-                RouterNodeTracker rnt = r.AssignedGameObject.GetComponent<RouterNodeTracker>();
-                rnt.gameObject.GetComponent<LineRenderer>().enabled = false;
-                rnt.SetNewPosiiton(rnt.InitPos);
-                foreach (var p in rnt.childrenLines)
-                {
-                    p.gameObject.SetActive(true);
-                }
-                foreach (var p in rnt.connectionLines)
-                {
-                    p.gameObject.SetActive(true);
-                }
-            }
-
-            var pcNodes = hngo.Where(p => p.deviceType == GraphStructureV1.GENERAL_PURPOSE);
-            foreach (var h in pcNodes)
-            {
-                h.AssignedGameObject.SetActive(true);
-            }
-        }
-        else
-        {
-            UpdateNetworkRender();
-        }
-    }
     void SearchPCNode(HostNode2 h, int[] searchArray, PCNodeTracker pcNode)
     {
         for (int i = 0; i < 4; i++)
