@@ -1,4 +1,4 @@
-﻿using nmap_tools;
+using nmap_tools;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;

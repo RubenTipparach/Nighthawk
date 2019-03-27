@@ -1,0 +1,261 @@
+{
+    "SEARCH": "x11",
+    "DB_PATH_EXPLOIT": "/usr/share/exploitdb",
+    "RESULTS_EXPLOIT": [
+        {
+            "Title": "ASUS DSL-X11 ADSL Router - DNS Change",
+            "EDB-ID": "40373",
+            "Date": "2016-09-13",
+            "Author": "Todor Donev",
+            "Type": "webapps",
+            "Platform": "cgi",
+            "Path": "/usr/share/exploitdb/exploits/cgi/webapps/40373.sh"
+        },
+        {
+            "Title": "BSD/OS 2.1 / DG/UX 7.0 / Debian 1.3 / HP-UX 10.34 / IBM AIX 4.2 / SGI IRIX 6.4 / Solaris 2.5.1 - '/usr/bin/X11/xlock' Local Privilege Escalation (2)",
+            "EDB-ID": "19173",
+            "Date": "1997-04-26",
+            "Author": "BeastMaster",
+            "Type": "local",
+            "Platform": "unix",
+            "Path": "/usr/share/exploitdb/exploits/unix/local/19173.c"
+        },
+        {
+            "Title": "Eterm 0.8.10 / rxvt 2.6.1 / PuTTY 0.48 / X11R6 3.3.3/4.0 - Denial of Service",
+            "EDB-ID": "19984",
+            "Date": "2000-05-31",
+            "Author": "Kit Knox",
+            "Type": "dos",
+            "Platform": "multiple",
+            "Path": "/usr/share/exploitdb/exploits/multiple/dos/19984.c"
+        },
+        {
+            "Title": "Gnome 1.0/1.1 / Group X 11.0 / XFree86 X11R6 3.3.x/4.0 - Denial of Service",
+            "EDB-ID": "20023",
+            "Date": "2000-06-19",
+            "Author": "Chris Evans",
+            "Type": "dos",
+            "Platform": "linux",
+            "Path": "/usr/share/exploitdb/exploits/linux/dos/20023.c"
+        },
+        {
+            "Title": "SCO Open Server 5.0.5 / IRIX 6.2 ibX11/X11 Toolkit/Athena Widget Library - Local Buffer Overflow",
+            "EDB-ID": "19684",
+            "Date": "1999-12-20",
+            "Author": "Last Stage of Delirium",
+            "Type": "local",
+            "Platform": "multiple",
+            "Path": "/usr/share/exploitdb/exploits/multiple/local/19684.c"
+        },
+        {
+            "Title": "Slackware Linux 3.1 - '/usr/X11/bin/SuperProbe' Local Buffer Overflow",
+            "EDB-ID": "19283",
+            "Date": "1997-03-04",
+            "Author": "Solar",
+            "Type": "local",
+            "Platform": "linux",
+            "Path": "/usr/share/exploitdb/exploits/linux/local/19283.c"
+        },
+        {
+            "Title": "Solaris 5.5.1 X11R6.3 - xterm '-xrm' Local Privilege Escalation",
+            "EDB-ID": "338",
+            "Date": "1997-05-28",
+            "Author": "David Hedley",
+            "Type": "local",
+            "Platform": "solaris",
+            "Path": "/usr/share/exploitdb/exploits/solaris/local/338.c"
+        },
+        {
+            "Title": "Tor (Linux) - X11 Linux Sandbox Breakout",
+            "EDB-ID": "42626",
+            "Date": "2017-09-06",
+            "Author": "Google Security Research",
+            "Type": "local",
+            "Platform": "linux",
+            "Path": "/usr/share/exploitdb/exploits/linux/local/42626.c"
+        },
+        {
+            "Title": "X 11.0/3.3.3/3.3.4/3.3.5/3.3.6/4.0 - libX11 '_XAsyncReply()' Stack Corruption",
+            "EDB-ID": "20045",
+            "Date": "2000-06-19",
+            "Author": "Chris Evans",
+            "Type": "local",
+            "Platform": "linux",
+            "Path": "/usr/share/exploitdb/exploits/linux/local/20045.c"
+        },
+        {
+            "Title": "X.Org X11 (X11R6.9.0/X11R7.0) - Local Privilege Escalation",
+            "EDB-ID": "1596",
+            "Date": "2006-03-20",
+            "Author": "H D Moore",
+            "Type": "local",
+            "Platform": "linux",
+            "Path": "/usr/share/exploitdb/exploits/linux/local/1596.txt"
+        },
+        {
+            "Title": "X.Org xorg-x11-xfs 1.0.2-3.1 - Local Race Condition",
+            "EDB-ID": "5167",
+            "Date": "2008-02-21",
+            "Author": "vl4dZ",
+            "Type": "local",
+            "Platform": "linux",
+            "Path": "/usr/share/exploitdb/exploits/linux/local/5167.sh"
+        },
+        {
+            "Title": "X11R6 3.3.3 - Symlink",
+            "EDB-ID": "19257",
+            "Date": "1999-03-21",
+            "Author": "Stealthf0rk",
+            "Type": "local",
+            "Platform": "linux",
+            "Path": "/usr/share/exploitdb/exploits/linux/local/19257.c"
+        },
+        {
+            "Title": "X11R6 < 6.4 XKEYBOARD (Solaris/SPARC) - Local Buffer Overflow (1)",
+            "EDB-ID": "2330",
+            "Date": "2006-09-08",
+            "Author": "RISE Security",
+            "Type": "local",
+            "Platform": "solaris",
+            "Path": "/usr/share/exploitdb/exploits/solaris/local/2330.c"
+        },
+        {
+            "Title": "X11R6 < 6.4 XKEYBOARD (Solaris/SPARC) - Local Buffer Overflow (2)",
+            "EDB-ID": "2360",
+            "Date": "2006-09-13",
+            "Author": "Marco Ivaldi",
+            "Type": "local",
+            "Platform": "solaris",
+            "Path": "/usr/share/exploitdb/exploits/solaris/local/2360.c"
+        },
+        {
+            "Title": "X11R6 < 6.4 XKEYBOARD (sco x86) - Local Buffer Overflow",
+            "EDB-ID": "2332",
+            "Date": "2006-09-08",
+            "Author": "RISE Security",
+            "Type": "local",
+            "Platform": "sco",
+            "Path": "/usr/share/exploitdb/exploits/sco/local/2332.c"
+        },
+        {
+            "Title": "X11R6 < 6.4 XKEYBOARD (solaris x86) - Local Buffer Overflow",
+            "EDB-ID": "2331",
+            "Date": "2006-09-08",
+            "Author": "RISE Security",
+            "Type": "local",
+            "Platform": "solaris",
+            "Path": "/usr/share/exploitdb/exploits/solaris/local/2331.c"
+        },
+        {
+            "Title": "XFree86 X11R6 3.3 XDM - Session Cookie Guessing",
+            "EDB-ID": "20993",
+            "Date": "2001-06-24",
+            "Author": "ntf & sky",
+            "Type": "remote",
+            "Platform": "unix",
+            "Path": "/usr/share/exploitdb/exploits/unix/remote/20993.c"
+        },
+        {
+            "Title": "XFree86 X11R6 3.3.2 XMan - ManPath Environment Variable Buffer Overflow",
+            "EDB-ID": "21010",
+            "Date": "2001-06-11",
+            "Author": "kf",
+            "Type": "local",
+            "Platform": "linux",
+            "Path": "/usr/share/exploitdb/exploits/linux/local/21010.sh"
+        },
+        {
+            "Title": "XFree86 X11R6 3.3.5/3.3.6/4.0 Xserver - Denial of Service",
+            "EDB-ID": "19950",
+            "Date": "2000-05-18",
+            "Author": "Chris Evans",
+            "Type": "dos",
+            "Platform": "linux",
+            "Path": "/usr/share/exploitdb/exploits/linux/dos/19950.c"
+        },
+        {
+            "Title": "XFree86 X11R6 3.3.x - Font Server Remote Buffer Overrun",
+            "EDB-ID": "22036",
+            "Date": "2002-11-25",
+            "Author": "TESO Security",
+            "Type": "remote",
+            "Platform": "unix",
+            "Path": "/usr/share/exploitdb/exploits/unix/remote/22036.pl"
+        },
+        {
+            "Title": "Xorg X11 Server (AIX) - Local Privilege Escalation",
+            "EDB-ID": "45938",
+            "Date": "2018-12-04",
+            "Author": "0xdono",
+            "Type": "local",
+            "Platform": "aix",
+            "Path": "/usr/share/exploitdb/exploits/aix/local/45938.pl"
+        },
+        {
+            "Title": "Xorg X11 Server - SUID privilege escalation (Metasploit)",
+            "EDB-ID": "45908",
+            "Date": "2018-11-26",
+            "Author": "Metasploit",
+            "Type": "local",
+            "Platform": "multiple",
+            "Path": "/usr/share/exploitdb/exploits/multiple/local/45908.rb"
+        },
+        {
+            "Title": "xorg-x11-server 1.20.3 - Privilege Escalation",
+            "EDB-ID": "45742",
+            "Date": "2018-10-30",
+            "Author": "Marco Ivaldi",
+            "Type": "local",
+            "Platform": "openbsd",
+            "Path": "/usr/share/exploitdb/exploits/openbsd/local/45742.sh"
+        },
+        {
+            "Title": "xorg-x11-server < 1.20.1 - Local Privilege Escalation",
+            "EDB-ID": "45832",
+            "Date": "2018-11-13",
+            "Author": "bolonobolo",
+            "Type": "local",
+            "Platform": "linux",
+            "Path": "/usr/share/exploitdb/exploits/linux/local/45832.py"
+        },
+        {
+            "Title": "xorg-x11-server < 1.20.3 - 'modulepath' Local Privilege Escalation",
+            "EDB-ID": "45922",
+            "Date": "2018-11-30",
+            "Author": "Marco Ivaldi",
+            "Type": "local",
+            "Platform": "openbsd",
+            "Path": "/usr/share/exploitdb/exploits/openbsd/local/45922.sh"
+        },
+        {
+            "Title": "xorg-x11-server < 1.20.3 - Local Privilege Escalation (Solaris 11 inittab)",
+            "EDB-ID": "46142",
+            "Date": "2019-01-14",
+            "Author": "Marco Ivaldi",
+            "Type": "local",
+            "Platform": "solaris",
+            "Path": "/usr/share/exploitdb/exploits/solaris/local/46142.sh"
+        },
+        {
+            "Title": "xorg-x11-server < 1.20.3 - Local Privilege Escalation",
+            "EDB-ID": "45697",
+            "Date": "2018-10-25",
+            "Author": "Hacker Fantastic",
+            "Type": "local",
+            "Platform": "multiple",
+            "Path": "/usr/share/exploitdb/exploits/multiple/local/45697.txt"
+        }
+    ],
+    "DB_PATH_SHELLCODE": "/usr/share/exploitdb",
+    "RESULTS_SHELLCODE": [
+        {
+            "Title": "OSX/PPC - execve(/usr/X11R6/bin/xterm) Shellcode (141 bytes)",
+            "EDB-ID": "13487",
+            "Date": "2004-09-26",
+            "Author": "B-r00t",
+            "Type": "shellcode",
+            "Platform": "osx_ppc",
+            "Path": "/usr/share/exploitdb/shellcodes/osx_ppc/13487.c"
+        }
+    ]
+}
