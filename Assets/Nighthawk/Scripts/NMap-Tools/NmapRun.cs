@@ -10,6 +10,7 @@ namespace nmap_tools
     /// <summary>
     /// Represents a NMAPRUN root element.
     /// </summary>
+    [Serializable]
     [XmlRoot("nmaprun")]
     public sealed class NmapRun
     {
