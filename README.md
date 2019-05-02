@@ -14,6 +14,10 @@ A VR based environment for execution of cyber attack simulations.
 
 ## Version progression
 
+### v0.4.1
+- Added API to parse XML and JSON
+- Added web request API to communicate with the FLASK python server
+
 ### v0.4
 - Added in animations for search transitions. 
 - Also restructured graph and search system to make system more robust and queryable.
