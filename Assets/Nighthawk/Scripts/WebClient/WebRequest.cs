@@ -1,4 +1,6 @@
-﻿using nmap_tools;
+using Assets.Nighthawk.Scripts.Searchsploit_Tools;
+using Newtonsoft.Json;
+using nmap_tools;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,19 +21,32 @@ public class WebRequest : MonoBehaviour
     [SerializeField]
     bool testScanTarget = false;
 
+    [SerializeField]
+    bool isTestVal = false;
+
 
     [SerializeField]
     string initialUrl = "";
 
-    public bool ServerIsOnline { private set; get; }
+    public bool ServerIsOnline { get; private set; }
 
     [SerializeField]
     ScanHostsPayload scanableTargets;
 
-    [SerializeField]
-    ScanTargetPayload scanTargetPayload;
+    //[SerializeField]
+    public ScanTargetPayload scanTargetPayload { get; private set; }
 
-    public NmapRun NmapRun { private set; get; }
+    public NmapRun NmapRun { get; private set; }
+
+    public string[] listEnabledExploit;
+
+    [SerializeField]
+    SploitResults[] _scannedExploits;
+
+    public SploitResults[] ScannedExploits
+    {
+        get { return _scannedExploits; }
+    }
 
     private void Awake()
     {
@@ -97,12 +112,17 @@ public class WebRequest : MonoBehaviour
             return;
         }
 
-        StartCoroutine(GetRequest(initialUrl + "/scantarget/"+ ipAdress.Replace('.','_'),
+        StartCoroutine(GetRequest(initialUrl + "/scantarget/"+ ipAdress.Replace('.','_') + "/"+ (isTestVal ? 1: 0),
         (result) => {
-            Debug.Log(result);
+            // Debug.Log(result);
 
-            scanTargetPayload = JsonUtility.FromJson<ScanTargetPayload>(result);
+            scanTargetPayload = JsonConvert.DeserializeObject<ScanTargetPayload>(result);
             NmapRun = ReadNmapXML(scanTargetPayload.scan_target_data);
+
+            listEnabledExploit = scanTargetPayload.scan_target_exploits.exploit_hardcoded;
+
+            _scannedExploits = scanTargetPayload.scan_target_exploits.scannedExploits;
+
         }));
     }
 
@@ -122,8 +142,20 @@ public class WebRequest : MonoBehaviour
 
     [Serializable]
     public class ScanTargetPayload {
+
         public string message;
+
         public string scan_target_data;
+
+        public SearchSploitScans scan_target_exploits;
+    }
+
+    [Serializable]
+    public class SearchSploitScans
+    {
+        public string[] exploit_hardcoded;
+
+        public SploitResults[] scannedExploits;
     }
 
     IEnumerator GetRequest(string uri, Action<string> callback)

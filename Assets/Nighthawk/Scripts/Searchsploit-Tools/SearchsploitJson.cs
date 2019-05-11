@@ -8,47 +8,49 @@ using System.Threading.Tasks;
 namespace Assets.Nighthawk.Scripts.Searchsploit_Tools
 {
     [JsonObject(MemberSerialization.OptIn)]
+    [Serializable]
     public class SearchsploitJson
     {
         [JsonProperty]
-        public string SEARCH { get; set; }
+        public string SEARCH;
 
         [JsonProperty]
-        public string DB_PATH_EXPLOIT{ get; set; }
+        public string DB_PATH_EXPLOIT;
 
         [JsonProperty]
-        public SploitResults[] RESULTS_EXPLOIT { get; set; }
+        public SploitResults[] RESULTS_EXPLOIT;
 
         [JsonProperty]
-        public string DB_PATH_SHELLCODE { get; set; }
+        public string DB_PATH_SHELLCODE;
 
         [JsonProperty]
-        public SploitResults[] RESULTS_SHELLCODE { get; set; }
+        public SploitResults[] RESULTS_SHELLCODE;
 
     }
 
     [JsonObject(MemberSerialization.OptIn)]
+    [Serializable]
     public class SploitResults
     {
         [JsonProperty]
-        public string Title { get; set; }
+        public string Title;
 
-        [JsonProperty(PropertyName ="EBD-ID")]
-        public string EBDID { get; set; }
-
-        [JsonProperty]
-        public string Date{ get; set; }
+        [JsonProperty(PropertyName = "EBD-ID")]
+        public string EBDID;
 
         [JsonProperty]
-        public string Author{ get; set; }
+        public string Date;
 
         [JsonProperty]
-        public string Type { get; set; }
+        public string Author;
 
         [JsonProperty]
-        public string Platform { get; set; }
+        public string Type;
 
         [JsonProperty]
-        public string Path { get; set; }
+        public string Platform;
+
+        [JsonProperty]
+        public string Path;
     }
 }
