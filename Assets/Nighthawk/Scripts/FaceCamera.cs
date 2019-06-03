@@ -9,6 +9,7 @@ public class FaceCamera : MonoBehaviour
     void Start()
     {
         //transform.Rotate( 180,0,0 );
+        
     }
 
     void Update()

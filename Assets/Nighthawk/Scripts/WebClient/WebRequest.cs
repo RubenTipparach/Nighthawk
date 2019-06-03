@@ -99,6 +99,7 @@ public class WebRequest : MonoBehaviour
 
         StartCoroutine(GetRequest(initialUrl + "/scan",
         (result) => {
+            Debug.Log("********************** SCAN **********************");
             Debug.Log(result);
 
             scanableTargets = JsonUtility.FromJson<ScanHostsPayload>(result);
@@ -114,7 +115,8 @@ public class WebRequest : MonoBehaviour
 
         StartCoroutine(GetRequest(initialUrl + "/scantarget/"+ ipAdress.Replace('.','_') + "/"+ (isTestVal ? 1: 0),
         (result) => {
-            // Debug.Log(result);
+            Debug.Log("********************** SCANTARGET **********************");
+            Debug.Log(result);
 
             scanTargetPayload = JsonConvert.DeserializeObject<ScanTargetPayload>(result);
             NmapRun = ReadNmapXML(scanTargetPayload.scan_target_data);
