@@ -4,6 +4,7 @@ using Mapbox.Utils;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using System;
+using VRTK;
 
 // New Map move class based on "Quad Tree Map Move" Script
 public class MapMovePlus : MonoBehaviour
@@ -34,6 +35,14 @@ public class MapMovePlus : MonoBehaviour
     private Plane _groundPlane = new Plane(Vector3.up, 0);
     private bool _dragStartedOnUI = false;
 
+    [SerializeField]
+    VRTK_ControllerEvents rightControllerEvents;
+
+    [SerializeField]
+    VRTK_ControllerEvents leftControllerEvents;
+
+    [SerializeField]
+    float scrollSpeed = 10;
     void Awake()
     {
         //if (null == _referenceCamera)
@@ -45,6 +54,8 @@ public class MapMovePlus : MonoBehaviour
         {
             _isInitialized = true;
         };
+
+        leftAxis = Vector2.zero;
     }
 
     public void Update()
@@ -67,15 +78,41 @@ public class MapMovePlus : MonoBehaviour
 
         if (!_dragStartedOnUI)
         {
-            if (Input.touchSupported && Input.touchCount > 0)
+            //if (Input.touchSupported && Input.touchCount > 0)
+            //{
+            //    HandleTouch();
+            //}
+            //else
+            //{
+            //    HandleMouseAndKeyBoard();
+            //}
+
+            if (leftAxis != Vector2.zero)
             {
-                HandleTouch();
-            }
-            else
-            {
-                HandleMouseAndKeyBoard();
+                PanMapUsingKeyBoard(leftAxis.x * scrollSpeed * Time.deltaTime, leftAxis.y * scrollSpeed * Time.deltaTime);
             }
         }
+    }
+
+    Vector2 leftAxis;
+    private void Start()
+    {
+        leftControllerEvents.TouchpadTouchEnd += LeftControllerEvents_TouchpadReleased;
+        leftControllerEvents.TouchpadAxisChanged += new ControllerInteractionEventHandler((sender, e)=>
+        {
+            leftAxis = e.touchpadAxis;
+            
+        });
+
+        rightControllerEvents.TouchpadAxisChanged += new ControllerInteractionEventHandler((sender,e) => {
+            ZoomMapUsingTouchOrMouse(Mathf.Sign(e.touchpadAxis.y));
+        });
+    }
+
+    private void LeftControllerEvents_TouchpadReleased(object sender, ControllerInteractionEventArgs e)
+    {
+        leftAxis = Vector2.zero;
+        PanMapUsingKeyBoard(leftAxis.x, leftAxis.y);
     }
 
     void HandleMouseAndKeyBoard()

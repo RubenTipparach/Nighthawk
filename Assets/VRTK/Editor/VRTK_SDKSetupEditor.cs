@@ -440,7 +440,7 @@
                         VRTK_SDKSetup[] setups = FindObjectsOfType<VRTK_SDKSetup>();
                         foreach (VRTK_SDKSetup setup in setups)
                         {
-                            setup.gameObject.SetActive(false);
+                            //setup.gameObject.SetActive(false);
                         }
 
                         if (setups.Length != 0)
