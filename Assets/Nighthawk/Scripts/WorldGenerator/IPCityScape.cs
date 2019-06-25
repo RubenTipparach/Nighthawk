@@ -24,6 +24,9 @@ public class IPCityScape : MonoBehaviour
     [SerializeField]
     TextMeshPro textPrefab;
 
+    [SerializeField]
+    Camera playerCamera;
+
     private void Awake()
     {
         loadedNetworkData.finishedLoadingData += LoadedNetworkData_finishedLoadingData;
@@ -62,6 +65,8 @@ public class IPCityScape : MonoBehaviour
 
             var tmp = textObj.GetComponent<TextMeshPro>();
             tmp.SetText($"{l1n.octets[0]}.{l1n.octets[1]}.{l1n.octets[2]}.{l1n.octets[3]}");
+            var script = textObj.GetComponent<FaceCamera>();
+            script.cameraToLookAt = playerCamera;
 
             float index = 0;
             foreach (var l2n in l1n.child)
@@ -86,7 +91,8 @@ public class IPCityScape : MonoBehaviour
                 // set text content
                 var tmp2 = textObj2.GetComponent<TextMeshPro>();
                 tmp2.SetText($"{l2n.octets[0]}.{l2n.octets[1]}.{l2n.octets[2]}.{l2n.octets[3]}");
-
+                var script2 = textObj2.GetComponent<FaceCamera>();
+                script2.cameraToLookAt = playerCamera;
 
                 index++;
             }

@@ -4,4 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Nighthawk/Scenes/m0_Index.unity
+    guid: 88462101661851845992112d735019a7
+  - enabled: 1
+    path: Assets/Nighthawk/Scenes/m1_demo_vr_ip_req_test.unity
+    guid: 353ed768d00bcc849ab52889e809c73c
+  - enabled: 1
+    path: Assets/Nighthawk/Scenes/m2_City_Flythrough.unity
+    guid: 94de8d6d366612848898da3e4d190485
+  - enabled: 1
+    path: Assets/Nighthawk/Scenes/m3_ZoomableMap 2.unity
+    guid: d57d42aae94289b4d95cfd8cd1d7f13e
+  - enabled: 1
+    path: Assets/Nighthawk/Scenes/m4_graph_demo_web_req.unity
+    guid: fe86dd3197f47234c882e2b510116a11
+  m_configObjects: {}
