@@ -63,8 +63,10 @@ namespace BaroqueUI
 
         public void HapticPulse(int durationMicroSec = 500)
         {
-            if (Application.isPlaying)
-                SteamVR_Controller.Input((int)trackedObject.index).TriggerHapticPulse((ushort)durationMicroSec);
+            //if (Application.isPlaying)
+            //    SteamVR_Controller.Input((int)trackedObject.index).TriggerHapticPulse((ushort)durationMicroSec);
+
+            //disabling haptic for now.
         }
 
         public Transform SetPointer(string pointer_name)
@@ -319,7 +321,7 @@ namespace BaroqueUI
         Vector2 touch_original_pos2;     /* valid in states SmallDelay or Action2; also None if touchpadTouched */
         Vector3 touch_original_pos3;     /* valid in state SmallDelay */
 
-        SteamVR_TrackedObject trackedObject;
+        SteamVR_Behaviour_Pose trackedObject;
         const int SWV_FROMSCRIPT = 1;
         const int SWV_SCROLLING = 2;
         int scrollWheelVisible;
@@ -341,7 +343,7 @@ namespace BaroqueUI
 
             overlapping_trackers = new Dictionary<ControllerTracker, float>();
 
-            trackedObject = GetComponent<SteamVR_TrackedObject>();
+            trackedObject = GetComponent<SteamVR_Behaviour_Pose>();
             if (trackedObject == null)
                 throw new MissingComponentException("'[CameraRig]/" + name + "' gameobject is missing a SteamVR_TrackedObject component");
             ResetVelocityEstimates();
@@ -356,7 +358,7 @@ namespace BaroqueUI
         {
             var system = OpenVR.System;
             return (system != null && isActiveAndEnabled &&
-                system.GetControllerState((uint)trackedObject.index, ref controllerState,
+                system.GetControllerState((uint)trackedObject.inputSource, ref controllerState,
                                           (uint)System.Runtime.InteropServices.Marshal.SizeOf(typeof(VRControllerState_t))));
         }
         protected virtual Collider[] GetOverlappingColliders(Vector3 current_position)

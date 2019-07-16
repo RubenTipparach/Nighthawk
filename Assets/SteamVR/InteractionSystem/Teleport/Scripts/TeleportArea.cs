@@ -25,6 +25,8 @@ namespace Valve.VR.InteractionSystem
 		private Color lockedTintColor = Color.clear;
 		private bool highlighted = false;
 
+        public bool isNavMesh = false;
+
 		//-------------------------------------------------
 		public void Awake()
 		{
@@ -33,7 +35,9 @@ namespace Valve.VR.InteractionSystem
 			tintColorId = Shader.PropertyToID( "_TintColor" );
 
 			CalculateBounds();
-		}
+            
+
+        }
 
 
 		//-------------------------------------------------
@@ -104,6 +108,9 @@ namespace Valve.VR.InteractionSystem
 		//-------------------------------------------------
 		public void UpdateVisualsInEditor()
 		{
+            if (Teleport.instance == null)
+                return;
+
 			areaMesh = GetComponent<MeshRenderer>();
 
 			if ( locked )
