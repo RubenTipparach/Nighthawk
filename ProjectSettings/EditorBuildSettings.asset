@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Nighthawk/Scenes/m4_graph_demo_web_req.unity
     guid: fe86dd3197f47234c882e2b510116a11
+  - enabled: 1
+    path: Assets/Hover/InputModules/Vive/Scenes/HoverInputModule-Vive.unity
+    guid: d23c724f9cecda740b4c87a4d9c04676
   m_configObjects: {}
