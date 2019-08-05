@@ -1,4 +1,4 @@
-﻿// Base Pointer Renderer|PointerRenderers|10010
+// Base Pointer Renderer|PointerRenderers|10010
 namespace VRTK
 {
     using UnityEngine;

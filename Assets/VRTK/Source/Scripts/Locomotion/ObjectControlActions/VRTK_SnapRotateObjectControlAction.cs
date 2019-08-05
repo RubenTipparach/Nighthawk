@@ -1,4 +1,4 @@
-﻿// Snap Rotate Object Control Action|ObjectControlActions|25030
+// Snap Rotate Object Control Action|ObjectControlActions|25030
 namespace VRTK
 {
     using UnityEngine;
