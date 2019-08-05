@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.horizonstar.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "D:\\repos\\Nighthawk\\actions.json",
+      "action_manifest_path": "Y:\\repos\\Nighthawk\\actions.json",
       "strings": {
         "en_us": {
           "name": "Nighthawk [Testing]"

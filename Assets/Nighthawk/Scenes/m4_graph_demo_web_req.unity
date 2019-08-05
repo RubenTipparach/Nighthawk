@@ -825,7 +825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a19f12756a46ded4da426dc6b5bfcca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
+  playerCamera: {fileID: 944382750}
   loadNetworkDataV2: {fileID: 2118253139}
   nodePrefab: {fileID: 2104068050918957309, guid: db4fb440f3fec1749a4dea22302711f9,
     type: 3}
@@ -3088,6 +3088,36 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 944382740}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &944382750 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 20479979920554216, guid: bf30eb16cc26b774e8aed73fb6c17a1f,
+    type: 3}
+  m_PrefabInstance: {fileID: 944382740}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &944382755 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114042545903527162, guid: bf30eb16cc26b774e8aed73fb6c17a1f,
+    type: 3}
+  m_PrefabInstance: {fileID: 944382740}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944382744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a5fb0ca93b55ef4b8d54b512b103341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &944382760 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114514812629869802, guid: bf30eb16cc26b774e8aed73fb6c17a1f,
+    type: 3}
+  m_PrefabInstance: {fileID: 944382740}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944382746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a5fb0ca93b55ef4b8d54b512b103341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &969503025
 GameObject:
   m_ObjectHideFlags: 0
@@ -4974,7 +5004,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1335688350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5015,8 +5045,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a96406c7c7621504daa66ca36a899f37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  steamVR_ControllerManager_left: {fileID: 0}
-  steamVR_ControllerManager_right: {fileID: 0}
+  steamVR_ControllerManager_left: {fileID: 944382760}
+  steamVR_ControllerManager_right: {fileID: 944382755}
 --- !u!1 &1339431202
 GameObject:
   m_ObjectHideFlags: 0
