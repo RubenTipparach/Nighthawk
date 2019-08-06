@@ -46,13 +46,14 @@ namespace HoverDemos.GifAnim {
 			hold.transform.SetParent(vCubesObj.transform, false);
 
 			GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+
 			cube.name = "Cube"+pIndex;
 			cube.transform.SetParent(hold.transform, false);
 			cube.GetComponent<Renderer>().sharedMaterial = vCubeMat;
+            cube.AddComponent<RandomRotate>();
+            ////
 
-			////
-
-			hold.transform.localRotation = UnityEngine.Random.rotationUniform;
+            hold.transform.localRotation = UnityEngine.Random.rotationUniform;
 			cube.transform.localRotation = UnityEngine.Random.rotationUniform;
 
 			float radius = RandomUtil.Float(4, 10);
