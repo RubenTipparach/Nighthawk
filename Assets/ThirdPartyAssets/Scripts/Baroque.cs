@@ -1,27 +1,58 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using Valve.VR;
+using VRTK;
 
 namespace BaroqueUI
 {
     public static class Baroque
     {
-        static public SteamVR_ControllerManager GetSteamVRManager()
+        //static public SDK_SteamVRInputSource GetSteamVRManager()
+        //{
+        //    SDK_SteamVRInputSource mgr = SteamVRBaroqueInterface.svrBaroqueInterface.steamVR_ControllerManager;
+        //    if (mgr == null)
+        //        throw new MissingComponentException("'[CameraRig]' gameobject is missing a SteamVR_ControllerManager component");
+
+        //    return mgr;
+        //}
+
+        static public SteamVR_Behaviour_Pose GetSteamVRManager_Left()
         {
-            SteamVR_ControllerManager mgr = SteamVRBaroqueInterface.svrBaroqueInterface.steamVR_ControllerManager;
+            SteamVR_Behaviour_Pose mgr = SteamVRBaroqueInterface.svrBaroqueInterface.steamVR_ControllerManager_left;
             if (mgr == null)
                 throw new MissingComponentException("'[CameraRig]' gameobject is missing a SteamVR_ControllerManager component");
 
             return mgr;
         }
-        
+
+        static public SteamVR_Behaviour_Pose GetSteamVRManager_Right()
+        {
+            SteamVR_Behaviour_Pose mgr = SteamVRBaroqueInterface.svrBaroqueInterface.steamVR_ControllerManager_right;
+            if (mgr == null)
+                throw new MissingComponentException("'[CameraRig]' gameobject is missing a SteamVR_ControllerManager component");
+
+            return mgr;
+        }
+
+        static public Transform GetPlayAreaTransform()
+        {
+            if (gameArea == null)   // includes 'has been destroyed'
+            {
+                GameObject gamearea = GameObject.FindObjectOfType<SteamVR_PlayArea>().gameObject;
+                if (gamearea == null)
+                    throw new MissingComponentException("'[CameraRig]' gameobject has no 'SteamVR_Camera' inside");
+                gameArea = gamearea;
+            }
+            return gameArea.transform;
+        }
+
         static public Transform GetHeadTransform()
         {
             if (head == null)   // includes 'has been destroyed'
             {
-                SteamVR_Camera camera = GetSteamVRManager().GetComponentInChildren<SteamVR_Camera>();
+                Camera camera = GameObject.FindObjectOfType<SteamVR_PlayArea>().GetComponentInChildren<Camera>();
                 if (camera == null)
                     throw new MissingComponentException("'[CameraRig]' gameobject has no 'SteamVR_Camera' inside");
                 head = camera.gameObject;
@@ -109,7 +140,7 @@ namespace BaroqueUI
         /*********************************************************************************************/
 
         static bool controllersReady, globallyReady;
-        static GameObject head, left_controller, right_controller;
+        static GameObject head, left_controller, right_controller, gameArea;
         static Controller[] controllers;
 
         static GameObject InitController(GameObject go, int index)
@@ -139,14 +170,13 @@ namespace BaroqueUI
 #endif
                 Controller._InitControllers();
                 controllers = new Controller[2];
-                left_controller = InitController(GetSteamVRManager().left, 0);
-                right_controller = InitController(GetSteamVRManager().right, 1);
+                left_controller = InitController(GetSteamVRManager_Left().gameObject, 0);
+                right_controller = InitController(GetSteamVRManager_Right().gameObject, 1);
                 controllersReady = true;
 
                 if (!globallyReady)
                 {
                     SteamVR_Events.NewPosesApplied.AddListener(OnNewPosesApplied);
-
                     SceneManager.sceneUnloaded += (scene) => { controllersReady = false; };
                     globallyReady = true;
                 }

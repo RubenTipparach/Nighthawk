@@ -51,8 +51,8 @@ namespace BaroqueUI
             Application.logMessageReceived += HandleLog;
 
             CleanControllers();
-            left_ctrl = Baroque.GetSteamVRManager().left.AddComponent<FakeController>();
-            right_ctrl = Baroque.GetSteamVRManager().right.AddComponent<FakeController>();
+            left_ctrl = Baroque.GetSteamVRManager_Left().gameObject.AddComponent<FakeController>();
+            right_ctrl = Baroque.GetSteamVRManager_Right().gameObject.AddComponent<FakeController>();
             Baroque._InitTests();
         }
 
@@ -60,7 +60,7 @@ namespace BaroqueUI
         {
             left_ctrl = right_ctrl = null;
 
-            var golist = new GameObject[] { Baroque.GetSteamVRManager().left, Baroque.GetSteamVRManager().right };
+            var golist = new GameObject[] { Baroque.GetSteamVRManager_Left().gameObject, Baroque.GetSteamVRManager_Right().gameObject };
             foreach (var go in golist)
             {
                 Controller ctrl = go.GetComponent<FakeController>();
