@@ -8427,7 +8427,7 @@ MonoBehaviour:
   fallingDeceleration: 0.01
   speedMultiplier: 1.5
   EarthLatLongMultiplier: 0.001
-  wrldMap: {fileID: 0}
+  wrldMap: {fileID: 5174384956774316563}
   touchPadTouch:
     actionPath: /actions/vrtk/in/TouchpadTwoTouch
     needsReinit: 0
@@ -16119,7 +16119,7 @@ MonoBehaviour:
   fallingDeceleration: 0.01
   speedMultiplier: 1.5
   EarthLatLongMultiplier: 40
-  wrldMap: {fileID: 0}
+  wrldMap: {fileID: 5174384956774316563}
   touchPadTouch:
     actionPath: /actions/vrtk/in/TouchpadTwoTouch
     needsReinit: 0
@@ -24725,3 +24725,15 @@ PrefabInstance:
     - {fileID: 2843784361867694051, guid: 739238c6092151b49a79d035b93f65a7, type: 3}
     - {fileID: 2843784361867693983, guid: 739238c6092151b49a79d035b93f65a7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 739238c6092151b49a79d035b93f65a7, type: 3}
+--- !u!114 &5174384956774316563 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2843784361867694053, guid: 739238c6092151b49a79d035b93f65a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 5174384956774316562}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831100777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e268decdf681504d94f82815d0551b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

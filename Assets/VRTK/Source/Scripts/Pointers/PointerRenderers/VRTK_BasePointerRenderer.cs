@@ -405,8 +405,8 @@ namespace VRTK
         protected Transform GetOrigin(bool smoothed = true)
         {
             //adding debug for hand
-            var t = pointerOriginTransformFollow.gameObjectToChange.transform;
-            Debug.DrawRay(t.position, t.forward * 2, Color.red);
+            //var t = pointerOriginTransformFollow.gameObjectToChange.transform;
+            //Debug.DrawRay(t.position, t.forward * 2, Color.red);
 
             return (smoothed ? pointerOriginTransformFollow.gameObjectToChange.transform : (controllingPointer.customOrigin == null ? GetPointerOriginTransform() : controllingPointer.customOrigin));
         }
