@@ -24913,7 +24913,7 @@ GameObject:
   - component: {fileID: 921828343}
   - component: {fileID: 921828344}
   m_Layer: 9
-  m_Name: Model (1)
+  m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24927,7 +24927,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921828342}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 560165817}
@@ -33468,6 +33468,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1191772876}
   - component: {fileID: 1191772877}
+  - component: {fileID: 1191772879}
+  - component: {fileID: 1191772878}
   m_Layer: 0
   m_Name: RightController_PointerListeners
   m_TagString: Untagged
@@ -33504,10 +33506,73 @@ MonoBehaviour:
   pointer: {fileID: 109582315}
   hoverColor: {r: 0, g: 1, b: 1, a: 1}
   selectColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  logEnterEvent: 1
+  logEnterEvent: 0
   logHoverEvent: 0
-  logExitEvent: 1
-  logSetEvent: 1
+  logExitEvent: 0
+  logSetEvent: 0
+--- !u!114 &1191772878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191772875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 298dc087e0e7aa1448b68f272cb5cd83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointer: {fileID: 109582315}
+  hoverColor: {r: 0, g: 1, b: 1, a: 1}
+  selectColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  logEnterEvent: 0
+  logHoverEvent: 0
+  logExitEvent: 0
+  logSetEvent: 0
+  DestinationMarkerEnterEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK_Select_Addon+DestinationMarkerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  DestinationMarkerHoverEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK_Select_Addon+DestinationMarkerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  DestinationMarkerExitEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK_Select_Addon+DestinationMarkerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  DestinationMarkerSetEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1191772879}
+        m_MethodName: OnNodeSelectEnter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: VRTK_Select_Addon+DestinationMarkerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1191772879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191772875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eae6dbf5d16f214c91f16be297b857d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityText: {fileID: 2136180468}
 --- !u!1 &1206917761
 GameObject:
   m_ObjectHideFlags: 0
@@ -40025,7 +40090,7 @@ MonoBehaviour:
   enableTeleport: 1
   targetListPolicy: {fileID: 0}
   pointerRenderer: {fileID: 1408711851}
-  activationButton: 10
+  activationButton: 9
   holdButtonToActivate: 1
   activateOnEnable: 0
   activationDelay: 0
@@ -53370,6 +53435,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1891534711}
   - component: {fileID: 1891534712}
+  - component: {fileID: 1891534714}
+  - component: {fileID: 1891534713}
   m_Layer: 0
   m_Name: LeftController_PointerListeners
   m_TagString: Untagged
@@ -53406,10 +53473,73 @@ MonoBehaviour:
   pointer: {fileID: 1408711852}
   hoverColor: {r: 0, g: 1, b: 1, a: 1}
   selectColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  logEnterEvent: 1
+  logEnterEvent: 0
   logHoverEvent: 0
-  logExitEvent: 1
-  logSetEvent: 1
+  logExitEvent: 0
+  logSetEvent: 0
+--- !u!114 &1891534713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891534710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 298dc087e0e7aa1448b68f272cb5cd83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointer: {fileID: 1408711852}
+  hoverColor: {r: 0, g: 1, b: 1, a: 1}
+  selectColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  logEnterEvent: 0
+  logHoverEvent: 0
+  logExitEvent: 0
+  logSetEvent: 0
+  DestinationMarkerEnterEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK_Select_Addon+DestinationMarkerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  DestinationMarkerHoverEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK_Select_Addon+DestinationMarkerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  DestinationMarkerExitEvents:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK_Select_Addon+DestinationMarkerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  DestinationMarkerSetEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1891534714}
+        m_MethodName: OnNodeSelectEnter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: VRTK_Select_Addon+DestinationMarkerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1891534714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891534710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eae6dbf5d16f214c91f16be297b857d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityText: {fileID: 2136180468}
 --- !u!1 &1892689505
 GameObject:
   m_ObjectHideFlags: 0
@@ -53558,6 +53688,14 @@ PrefabInstance:
       propertyPath: useHoverSphere
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11450312, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: renderModelPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11450312, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 11401046, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: grabPinchAction.actionPath
       value: /actions/vrtk/in/GripTouch
@@ -53577,6 +53715,14 @@ PrefabInstance:
     - target: {fileID: 11401046, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: useHoverSphere
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401046, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: renderModelPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11401046, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2014920, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_BackGroundColor.r
@@ -57349,6 +57495,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136100916}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2136180468 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11421780, guid: 003df84d14cfa884899f0b67d2b5578b,
+    type: 3}
+  m_PrefabInstance: {fileID: 57423681}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &629734927988023914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57499,6 +57657,11 @@ PrefabInstance:
     - target: {fileID: 46059366280412378, guid: 559c9ba6918e6fb4e9fcd0dd4be5603e,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524886167995972146, guid: 559c9ba6918e6fb4e9fcd0dd4be5603e,
+        type: 3}
+      propertyPath: _selected
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -26,7 +26,6 @@ public class NodeData : MonoBehaviour
         set
         {
             _selected = value;
-
             SelectionSystem.gameObject.SetActive(_selected);
         }
     }

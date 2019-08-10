@@ -44,6 +44,17 @@ public class VRTK_Select_Addon : MonoBehaviour
         }
     }
 
+    protected virtual void OnDisable()
+    {
+        if (pointer != null)
+        {
+            pointer.DestinationMarkerEnter -= DestinationMarkerEnter;
+            pointer.DestinationMarkerHover -= DestinationMarkerHover;
+            pointer.DestinationMarkerExit -= DestinationMarkerExit;
+            pointer.DestinationMarkerSet -= DestinationMarkerSet;
+        }
+    }
+
     private void DestinationMarkerSet(object sender, DestinationMarkerEventArgs e)
     {
         if (logEnterEvent)
