@@ -31,6 +31,15 @@ public class EditorNodeConnector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (source == null && destination == null)
+        {
+            line.enabled = false;
+        }
+        else
+        {
+            line.enabled = true;
+        }
+
         if (source != null && destination != null)
         {
             UpdateWidth();
@@ -44,6 +53,8 @@ public class EditorNodeConnector : MonoBehaviour
             line.SetPosition(0, transform.position);
             line.SetPosition(1, destination.position);
         }
+
+        
     }
 
     private void UpdateWidth()

@@ -43,13 +43,11 @@ public class VRTK_MoveMap : MonoBehaviour
 
     private void Start()
     {
-        if (!isHeightOnly)
-        {
-            latLongAlt = Api.Instance.SpacesApi.WorldToGeographicPoint(PlayerTransform.position);// new LatLongAltitude(37.7858, -122.401, 0);
-            Api.Instance.SetOriginPoint(latLongAlt);
-        }
+
 
     }
+    
+    
 
     protected void Process( bool currentlyFalling, bool modifierActive)
     {
@@ -66,8 +64,23 @@ public class VRTK_MoveMap : MonoBehaviour
         }
     }
 
+    protected virtual void Awake()
+    {
+        VRTK_SDKManager.AttemptAddBehaviourToToggleOnLoadedSetupChange(this);
+        wrldMap.m_streamingCamera = VRTK_DeviceFinder.HeadsetCamera().GetComponent<Camera>();
+    }
+
     protected void OnEnable()
     {
+        
+        PlayerTransform = VRTK_DeviceFinder.PlayAreaTransform();
+        if (!isHeightOnly)
+        {
+            latLongAlt = Api.Instance.SpacesApi.WorldToGeographicPoint(PlayerTransform.position);// new LatLongAltitude(37.7858, -122.401, 0);
+            Api.Instance.SetOriginPoint(latLongAlt);
+        }
+
+
     }
 
     protected virtual float CalculateSpeed(float inputValue, bool currentlyFalling, bool modifierActive)
@@ -121,12 +134,12 @@ public class VRTK_MoveMap : MonoBehaviour
     {
         if (isHeightOnly)
         {
-            Debug.Log(axisDirection);
+            //Debug.Log(axisDirection);
 
             Vector2 updatedPosition = axisDirection * currentSpeed * Time.deltaTime * EarthLatLongMultiplier;
             var alt = latLongAlt.GetAltitude();
             alt += updatedPosition.y;
-            Debug.Log(axisDirection);
+            //Debug.Log(axisDirection);
 
             latLongAlt.SetAltitude(alt);
         }

@@ -10,7 +10,7 @@ public class WrldMap : MonoBehaviour
     [Header("Camera/View Settings")]
     [Tooltip("Camera used to request streamed resources")]
     [SerializeField]
-    private Camera m_streamingCamera = null;
+    public Camera m_streamingCamera = null;
 
     [Header("Setup")]
     [SerializeField]
