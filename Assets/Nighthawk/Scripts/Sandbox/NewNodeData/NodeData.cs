@@ -3,10 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NodeData : MonoBehaviour
 {
     public HostNode2 nodeInfo;
+
+    public Image progressBar;
+
+    public NodeDataState currentNodeState;
 
     // Todo: add to json file.
     public NodeDataChunk nodeDataChunk;
@@ -16,6 +21,10 @@ public class NodeData : MonoBehaviour
     [SerializeField]
     bool _selected = false;
 
+    float currentTimePassed;
+
+    [SerializeField]
+    float timeToOperate = 2.5f;
     public bool Selected
     {
         get
@@ -42,7 +51,29 @@ public class NodeData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(currentNodeState != NodeDataState.Idle)
+        {
+            //progressBar.imaget
+            if(currentTimePassed < timeToOperate)
+            {
+                currentTimePassed += Time.deltaTime;
+                progressBar.fillAmount = currentTimePassed / timeToOperate;
+            }
+            else
+            {
+                currentNodeState = NodeDataState.Idle;
+            }
+
+        }
+        // if node is in scanning mode, start spinning the icon.
+    }
+
+    public enum NodeDataState
+    {
+        Idle,
+        ScanningNode,
+        BeingHacked,
+        ShuttingDown
     }
 }
 
