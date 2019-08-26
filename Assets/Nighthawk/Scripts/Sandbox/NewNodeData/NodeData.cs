@@ -18,10 +18,15 @@ public class NodeData : MonoBehaviour
 
     public TextMeshPro textMeshPro;
 
+    public TextMeshPro stateText;
+
     [SerializeField]
     bool _selected = false;
 
     float currentTimePassed;
+
+
+    public Action onFinishedStateCallback;
 
     [SerializeField]
     float timeToOperate = 2.5f;
@@ -46,6 +51,7 @@ public class NodeData : MonoBehaviour
     void Start()
     {
         textMeshPro.text = nodeDataChunk.Name;
+        stateText.text = nameof(currentNodeState);
     }
 
     // Update is called once per frame
@@ -61,19 +67,37 @@ public class NodeData : MonoBehaviour
             }
             else
             {
-                currentNodeState = NodeDataState.Idle;
+                currentNodeState = NodeDataState.Scanned;
+                stateText.text = currentNodeState.ToString();
+                progressBar.fillAmount = 0;
+                // callback on the state transition, and set it back to idle.
+                onFinishedStateCallback?.Invoke();
+                onFinishedStateCallback = null;
             }
 
         }
         // if node is in scanning mode, start spinning the icon.
     }
 
+
+    public void BeginScan(Action onFinished = null)
+    {
+        progressBar.fillAmount = 0;
+        currentNodeState = NodeDataState.ScanningNode;
+        stateText.text = currentNodeState.ToString();
+
+        onFinishedStateCallback = onFinished;
+    }
+
     public enum NodeDataState
     {
         Idle,
         ScanningNode,
+        Scanned,
         BeingHacked,
-        ShuttingDown
+        Hacked,
+        ShuttingDown,
+        Offline
     }
 }
 
@@ -81,4 +105,17 @@ public class NodeData : MonoBehaviour
 public class NodeDataChunk
 {
     public string Name;
+
+    public List<Services> services;
+}
+
+[Serializable]
+public class Services
+{
+    public string name;
+
+    public string description;
+
+    public int portNum;
+
 }

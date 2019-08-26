@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,10 @@ public class NodeDataReader : MonoBehaviour
 
     [SerializeField]
     Text unityText;
+
+    public List<Services> scannedServices;
+
+    public HovercastDataController hdc;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +46,24 @@ public class NodeDataReader : MonoBehaviour
             nodeData.Selected = true;
             selectedNode = nodeData;
             unityText.text = nodeData.nodeDataChunk.Name;
+        }
+    }
+
+
+    public void ScanNode()
+    {
+        if(selectedNode != null)
+        {
+
+            hdc.scanningMessage.gameObject.SetActive(true);
+
+            Action callback = () =>
+            {
+                scannedServices = selectedNode.nodeDataChunk.services;
+                hdc.GenerateServiceUI(scannedServices);
+            };
+
+            selectedNode.BeginScan(callback);
         }
     }
 }
