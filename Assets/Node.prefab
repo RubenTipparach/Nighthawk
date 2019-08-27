@@ -214,11 +214,20 @@ MonoBehaviour:
     ports: 
   progressBar: {fileID: 4029515688793601962}
   currentNodeState: 0
+  securityLevel: 0
   nodeDataChunk:
     Name: Hooli Mainframe Node
+    services: []
   textMeshPro: {fileID: 46059366280412378}
   stateText: {fileID: 3097859006398413596}
   _selected: 0
+  matMapper:
+    Neutral: {fileID: 2100000, guid: 6d6edde2020c3524db8a9fa947b93bec, type: 2}
+    Captured: {fileID: 2100000, guid: a55a1b11f3dec584fa624171260e21de, type: 2}
+    Blocked: {fileID: 2100000, guid: 501e002f9b80afc48938235f1f05e6ef, type: 2}
+    Offline: {fileID: 2100000, guid: 4449e2ef71080f64ab702d905ba0cf50, type: 2}
+    InProgress: {fileID: 2100000, guid: 30220b7fae40c77499a6cc717bbdf0d8, type: 2}
+    Scanned: {fileID: 2100000, guid: 9605897e71d32814e9155bf6f50746ea, type: 2}
   timeToOperate: 2.5
   SelectionSystem: {fileID: 4247011136315718166}
 --- !u!33 &629734927658479725
