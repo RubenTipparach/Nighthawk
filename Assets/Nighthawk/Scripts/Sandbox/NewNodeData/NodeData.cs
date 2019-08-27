@@ -13,6 +13,8 @@ public class NodeData : MonoBehaviour
 
     public NodeDataState currentNodeState;
 
+    public SecurityLevel securityLevel;
+
     // Todo: add to json file.
     public NodeDataChunk nodeDataChunk;
 
@@ -24,9 +26,11 @@ public class NodeData : MonoBehaviour
     bool _selected = false;
 
     float currentTimePassed;
-
-
+    
     public Action onFinishedStateCallback;
+
+    [SerializeField]
+    NodeMatMapper matMapper;
 
     [SerializeField]
     float timeToOperate = 2.5f;
@@ -51,7 +55,7 @@ public class NodeData : MonoBehaviour
     void Start()
     {
         textMeshPro.text = nodeDataChunk.Name;
-        stateText.text = nameof(currentNodeState);
+        stateText.text = nameof(currentNodeState);        
     }
 
     // Update is called once per frame
@@ -67,9 +71,8 @@ public class NodeData : MonoBehaviour
             }
             else
             {
-                currentNodeState = NodeDataState.Scanned;
-                stateText.text = currentNodeState.ToString();
-                progressBar.fillAmount = 0;
+                UpdateNodeState(NodeDataState.Scanned);
+
                 // callback on the state transition, and set it back to idle.
                 onFinishedStateCallback?.Invoke();
                 onFinishedStateCallback = null;
@@ -81,12 +84,43 @@ public class NodeData : MonoBehaviour
 
 
     public void BeginScan(Action onFinished = null)
-    {
-        progressBar.fillAmount = 0;
-        currentNodeState = NodeDataState.ScanningNode;
-        stateText.text = currentNodeState.ToString();
+    {        
+        UpdateNodeState(NodeDataState.ScanningNode);
 
         onFinishedStateCallback = onFinished;
+    }
+
+    private void UpdateNodeState(NodeDataState nodeDataState, bool changeColor = true)
+    {
+        currentNodeState = nodeDataState;
+        progressBar.fillAmount = 0;
+        stateText.text = currentNodeState.ToString();
+
+        MeshRenderer mr = GetComponent<MeshRenderer>();
+
+        if (!changeColor) return;
+
+        switch (nodeDataState)
+        {
+            case NodeDataState.Idle:
+                mr.material = matMapper.Neutral;
+                break;
+            case NodeDataState.Hacked:
+                mr.material = matMapper.Captured;
+                break;
+            case NodeDataState.Scanned:
+                mr.material = matMapper.Scanned;
+                break;
+            case NodeDataState.HackFailed:
+                mr.material = matMapper.Blocked;
+                break;
+            case NodeDataState.Offline:
+                mr.material = matMapper.Offline;
+                break;
+            default:
+                mr.material = matMapper.InProgress;
+                break;
+        }
     }
 
     public enum NodeDataState
@@ -96,10 +130,18 @@ public class NodeData : MonoBehaviour
         Scanned,
         BeingHacked,
         Hacked,
+        HackFailed,
         ShuttingDown,
         Offline
     }
+
+    public enum SecurityLevel
+    {
+        IsHackable,
+        NotHackable
+    }
 }
+
 
 [Serializable]
 public class NodeDataChunk
@@ -107,6 +149,22 @@ public class NodeDataChunk
     public string Name;
 
     public List<Services> services;
+}
+
+[Serializable]
+public class NodeMatMapper
+{
+    public Material Neutral;
+
+    public Material Captured;
+
+    public Material Blocked;
+
+    public Material Offline;
+
+    public Material InProgress;
+
+    public Material Scanned;
 }
 
 [Serializable]
