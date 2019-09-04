@@ -56,6 +56,7 @@ public class NodeDataReader : MonoBehaviour
         {
 
             hdc.scanningMessage.gameObject.SetActive(true);
+            hdc.hackingMessage.gameObject.SetActive(false);
 
             Action callback = () =>
             {
@@ -64,6 +65,25 @@ public class NodeDataReader : MonoBehaviour
             };
 
             selectedNode.BeginScan(callback);
+        }
+    }
+
+    public void HackNode()
+    {
+        if (selectedNode != null)
+        {
+
+            hdc.hackingMessage.gameObject.SetActive(true);
+
+            Action callback = () =>
+            {
+                //scannedServices = selectedNode.nodeDataChunk.services;
+                //hdc.GenerateServiceUI(scannedServices);
+                // dunno what to do here yet...
+                hdc.hackingMessage.gameObject.SetActive(false);
+            };
+
+            selectedNode.BeginHack(callback);
         }
     }
 }
