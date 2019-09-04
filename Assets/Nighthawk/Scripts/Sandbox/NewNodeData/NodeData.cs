@@ -69,7 +69,7 @@ public class NodeData : MonoBehaviour
                 currentTimePassed += Time.deltaTime;
                 progressBar.fillAmount = currentTimePassed / timeToOperate;
             }
-            else
+            else if(currentNodeState == NodeDataState.ScanningNode)
             {
                 UpdateNodeState(NodeDataState.Scanned);
 
@@ -77,15 +77,39 @@ public class NodeData : MonoBehaviour
                 onFinishedStateCallback?.Invoke();
                 onFinishedStateCallback = null;
             }
+            else if (currentNodeState == NodeDataState.BeingHacked)
+            {
+                if(securityLevel == SecurityLevel.NotHackable)
+                {
+                    UpdateNodeState(NodeDataState.HackFailed); ;
+                }
+                else
+                {
+                    UpdateNodeState(NodeDataState.Hacked);
+                }
 
+                onFinishedStateCallback?.Invoke();
+                onFinishedStateCallback = null;
+            }
         }
         // if node is in scanning mode, start spinning the icon.
     }
 
 
     public void BeginScan(Action onFinished = null)
-    {        
+    {
+        // reset timer...
+        currentTimePassed = 0;
         UpdateNodeState(NodeDataState.ScanningNode);
+
+        onFinishedStateCallback = onFinished;
+    }
+
+    public void BeginHack(Action onFinished = null)
+    {
+        currentTimePassed = 0;
+
+        UpdateNodeState(NodeDataState.BeingHacked);
 
         onFinishedStateCallback = onFinished;
     }

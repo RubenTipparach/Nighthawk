@@ -12,6 +12,8 @@ public class HovercastDataController : MonoBehaviour
 
     public HoverItem serviceListTemplate;
 
+    public HoverItem hackingMessage;
+
     List<HoverItem> trackedHoverItems;
     // Start is called before the first frame update
     void Start()
