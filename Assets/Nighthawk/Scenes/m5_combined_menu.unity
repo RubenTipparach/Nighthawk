@@ -54381,7 +54381,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1891534711}
   - component: {fileID: 1891534712}
-  - component: {fileID: 1891534714}
   - component: {fileID: 1891534713}
   m_Layer: 0
   m_Name: LeftController_PointerListeners
@@ -54460,7 +54459,7 @@ MonoBehaviour:
   DestinationMarkerSetEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1891534714}
+      - m_Target: {fileID: 0}
         m_MethodName: OnNodeSelectEnter
         m_Mode: 0
         m_Arguments:
@@ -54473,21 +54472,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: VRTK_Select_Addon+DestinationMarkerEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1891534714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1891534710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eae6dbf5d16f214c91f16be297b857d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unityText: {fileID: 2136180468}
-  scannedServices: []
-  hdc: {fileID: 0}
 --- !u!1 &1892689505
 GameObject:
   m_ObjectHideFlags: 0
