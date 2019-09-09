@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e02a01319dd5a984c90cc3bb8bceb653, type: 3}
+  m_Name: WifiDataStore
+  m_EditorClassIdentifier: 
+  markerData:
+  - Latitude: 37.78625
+    Longitude: -122.40064
+    Altitude: 34.017487
+    name: marker 0
+    strengthLevel: 0
+  - Latitude: 37.78572
+    Longitude: -122.40108
+    Altitude: 32.7006
+    name: marker 1
+    strengthLevel: 0
+  - Latitude: 37.785675
+    Longitude: -122.40097
+    Altitude: 32.7006
+    name: marker 2
+    strengthLevel: 0
+  - Latitude: 37.78515
+    Longitude: -122.401245
+    Altitude: 35.41225
+    name: marker 3
+    strengthLevel: 0
+  - Latitude: 37.784824
+    Longitude: -122.40157
+    Altitude: 20.493559
+    name: marker 4
+    strengthLevel: 0
+  - Latitude: 37.78436
+    Longitude: -122.40039
+    Altitude: 15.659995
+    name: marker 5
+    strengthLevel: 0
+  - Latitude: 37.784264
+    Longitude: -122.400795
+    Altitude: 12.174913
+    name: marker 6
+    strengthLevel: 0
+  - Latitude: 37.78497
+    Longitude: -122.40018
+    Altitude: 12.174913
+    name: marker 7
+    strengthLevel: 0
+  - Latitude: 37.784866
+    Longitude: -122.40007
+    Altitude: 40.333313
+    name: marker 8
+    strengthLevel: 0
+  - Latitude: 37.785202
+    Longitude: -122.40001
+    Altitude: 28.107239
+    name: marker 9
+    strengthLevel: 0
+  - Latitude: 37.785435
+    Longitude: -122.40048
+    Altitude: 44.741833
+    name: marker 10
+    strengthLevel: 0
+  - Latitude: 37.785606
+    Longitude: -122.40036
+    Altitude: 92.44583
+    name: marker 11
+    strengthLevel: 0
+  - Latitude: 37.78533
+    Longitude: -122.4003
+    Altitude: 94.17869
+    name: marker 12
+    strengthLevel: 0
+  - Latitude: 37.786186
+    Longitude: -122.40129
+    Altitude: 94.17869
+    name: marker 13
+    strengthLevel: 0
+  - Latitude: 37.786186
+    Longitude: -122.40129
+    Altitude: 121.778625
+    name: marker 14
+    strengthLevel: 0
+  - Latitude: 37.786217
+    Longitude: -122.401375
+    Altitude: 69.9312
+    name: marker 15
+    strengthLevel: 2
+  - Latitude: 37.78634
+    Longitude: -122.401505
+    Altitude: 64.87012
+    name: marker 16
+    strengthLevel: 2
+  - Latitude: 37.78626
+    Longitude: -122.40139
+    Altitude: 43.14912
+    name: marker 17
+    strengthLevel: 2
+  - Latitude: 37.786217
+    Longitude: -122.401
+    Altitude: 43.14912
+    name: marker 18
+    strengthLevel: 1
+  - Latitude: 37.786373
+    Longitude: -122.40156
+    Altitude: 46.50167
+    name: marker 19
+    strengthLevel: 2
