@@ -22,6 +22,7 @@ public class numkeyRegex : MonoBehaviour
         }
     }
 
+
     public void NonRegexCheck(string input)
     {
         //if(input)
