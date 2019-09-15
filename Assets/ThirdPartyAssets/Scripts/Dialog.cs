@@ -531,6 +531,10 @@ namespace BaroqueUI
             if (distance_to_plane < 1)
                 distance_to_plane = 1;
             Transform tr = controller.SetPointer("Cursor");
+            var lac = tr.gameObject.GetComponent<Legacy_AccuracyCallibrator>();
+            lac.controller = controller.gameObject.GetComponent<SteamVR_TrackedController>();
+
+
             tr.rotation = transform.rotation;
             tr.localScale = new Vector3(1, 1, distance_to_plane);
         }
