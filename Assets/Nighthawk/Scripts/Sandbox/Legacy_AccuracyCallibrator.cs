@@ -97,7 +97,7 @@ public class Legacy_AccuracyCallibrator : MonoBehaviour
             //    //}
             //}
 
-            if (frameworkType == VR_Framework.Baroque)
+            if (frameworkType == VR_Framework.Baroque&& HandSourcePoint!= null)
             {
                 origin = HandSourcePoint.position;
                 destination = HandSourcePoint.position;
