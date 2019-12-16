@@ -72,7 +72,7 @@ public class AccuracyCallibrator : MonoBehaviour
                 if (uiPointer.pointerEventData != null && uiPointer.pointerEventData.pointerCurrentRaycast.isValid)
                 {
                     destination = uiPointer.pointerEventData.pointerCurrentRaycast.worldPosition;
-                    Debug.Log($"origin: {origin.ToString("G")} destination: {destination.ToString("G")}");
+                   // Debug.Log($"origin: {origin.ToString("G")} destination: {destination.ToString("G")}");
                     FormatInputData();
                 }
             }
@@ -90,7 +90,7 @@ public class AccuracyCallibrator : MonoBehaviour
 
                 destination = HandSourcePoint.forward * 0.05f + HandSourcePoint.position;
                 //destination = HandSourcePoint.forward * (0.05f) + origin;//simulate small transform
-                Debug.Log($"origin: {origin.ToString("G")} destination: {destination.ToString("G")}");
+               // Debug.Log($"origin: {origin.ToString("G")} destination: {destination.ToString("G")}");
                 FormatInputData();
                 //Debug.Log(hoverData.Idle.Progress);
                 //if (hoverData.Idle.IsActive)
